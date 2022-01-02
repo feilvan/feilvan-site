@@ -4,7 +4,17 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        brand: {
+          DEFAULT: "#4b5dff",
+        },
+      },
+      fontFamily: {
+        readex: "Readex Pro, sans-serif",
+        inter: "Inter, sans-serif",
+      },
+    },
   },
   plugins: [],
 };
