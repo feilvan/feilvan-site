@@ -36,4 +36,8 @@
     width: 36px;
     height: 2px;
   }
+
+  .react-icons {
+    vertical-align: middle;
+  }
 }

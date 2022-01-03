@@ -1,28 +1,21 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faUndo,
-  faArrowDown,
-  faArrowUp,
-  faTimes,
-} from "@fortawesome/free-solid-svg-icons";
+import { FaArrowDown, FaArrowUp, FaTimes, FaUndo } from "react-icons/fa";
 
 export default function Hero() {
   return (
     <div className="h-screen  relative">
-      <div className="text-gray-200 text-[18rem] sm:text-[22rem] lg:text-[24rem]">
-        <div className="absolute -top-16 -right-16 text-clip">
-          <FontAwesomeIcon icon={faArrowUp} />
-          <FontAwesomeIcon icon={faArrowDown} />
+      <div className="text-gray-200 text-[19rem] sm:text-[22rem] lg:text-[24rem]">
+        <div className="absolute -top-24 -right-16 flex flex-row -space-x-6">
+          <FaArrowUp />
+          <FaArrowDown />
         </div>
-        <FontAwesomeIcon
-          icon={faUndo}
-          className="absolute top-72 sm:top-[22rem] lg:top-[24rem] -right-20 text-clip"
-        />
+        <div className="absolute top-56 sm:top-64 lg:top-80 -right-20 text-clip">
+          <FaUndo />
+        </div>
       </div>
-      <div className="flex flex-col absolute -left-3 top-20 text-gray-200 text-[6rem]">
-        <FontAwesomeIcon icon={faTimes} />
-        <FontAwesomeIcon icon={faTimes} />
-        <FontAwesomeIcon icon={faTimes} />
+      <div className="flex flex-col sm:flex-row absolute -left-8 top-72 sm:top-80 lg:top-40 text-gray-200 text-[6rem]">
+        <FaTimes />
+        <FaTimes />
+        <FaTimes />
       </div>
       <div className="absolute bottom-40 left-6">
         <p className="qt pl-12 mb-4 text-xl text-gray-500 tracking-wider">

@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPoo } from "@fortawesome/free-solid-svg-icons";
+import { FaPoo } from "react-icons/fa";
 
 export default function Navbar() {
   const router = useRouter();
@@ -28,7 +27,7 @@ export default function Navbar() {
           </Link>
           <Link href="/uebok">
             <a className={router.pathname == "/uebok" ? "navbar-active" : ""}>
-              <FontAwesomeIcon icon={faPoo} />
+              <FaPoo />
             </a>
           </Link>
         </div>

@@ -1,18 +1,17 @@
 import Link from "next/link";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faBan,
-  faBomb,
-  faCheck,
-  faFlagUsa,
-  faHeartbeat,
-  faPlusCircle,
-  faPoo,
-  faRunning,
-  faSkull,
-  faSkullCrossbones,
-  faStar,
-} from "@fortawesome/free-solid-svg-icons";
+  FaBan,
+  FaBomb,
+  FaCheck,
+  FaFlagUsa,
+  FaHeartbeat,
+  FaPlusCircle,
+  FaPoo,
+  FaRunning,
+  FaSkull,
+  FaSkullCrossbones,
+  FaStar,
+} from "react-icons/fa";
 
 export default function Uebok() {
   return (
@@ -34,10 +33,9 @@ export default function Uebok() {
             me
           </span>
           <br />5{" "}
-          <FontAwesomeIcon
-            icon={faStar}
-            className="relative -bottom-2 text-yellow-400"
-          />{" "}
+          <div className="relative -bottom-2 text-yellow-400">
+            <FaStar />
+          </div>{" "}
           I'm wanted
           <br />
           f*ck it I'm h<span className="relative top-1">a</span>
@@ -54,17 +52,20 @@ export default function Uebok() {
           </span>{" "}
           team
           <br />
-          check <FontAwesomeIcon icon={faCheck} className="text-green-600" /> it
-          I'm bougie
+          check{" "}
+          <div className="text-green-600">
+            <FaCheck />
+          </div>{" "}
+          it I'm bougie
           <br />
           <span className="relative left-2 -top-3">
-            flash bomb <FontAwesomeIcon icon={faBomb} /> I'm blinding.
+            flash bomb <FaBomb /> I'm blinding.
           </span>
         </p>
         <p className="relative top-16 -left-16">
           <span className="relative -top-2">Hands</span> above my{" "}
-          <span>
-            <FontAwesomeIcon icon={faSkull} className="relative top-2" />
+          <span className="relative top-2">
+            <FaSkull />
           </span>{" "}
           now
           <br />
@@ -78,29 +79,30 @@ export default function Uebok() {
           </span>
           <br />
           <span className="relative top-1">skipping</span> them heartbeats{" "}
-          <FontAwesomeIcon icon={faHeartbeat} className="text-green-600" />.
+          <div className="text-green-600">
+            <FaHeartbeat />
+          </div>
+          .
           <br />
         </p>
         <p className="relative top-24">
           <span className="relative -top-4">camos</span> and Uzis{" "}
-          <FontAwesomeIcon
-            icon={faFlagUsa}
-            className="text-lg relative -top-1"
-          />
+          <div className="text-lg relative -top-1">
+            <FaFlagUsa />
+          </div>
           <br />
           <span className="text-red-600 font-bold uppercase tracking-widest">
             bl<span className="text-xl">oo</span>d
           </span>
           ied <span className="text-xs">and</span> bruised me{" "}
-          <FontAwesomeIcon
-            icon={faPlusCircle}
-            className="text-red-600 text-xl relative -left-2 top-2"
-          />
+          <div className="text-red-600 text-xl relative -left-2 top-2">
+            <FaPlusCircle />
+          </div>
           <br />
           <span className="uppercase font-bold tracking-widest">
             n<span className="relative -left-1 -top-1">o</span> way
           </span>{" "}
-          <FontAwesomeIcon icon={faBan} /> to get out
+          <FaBan /> to get out
           <br />
           <span className="relative top-4">g</span>
           <span className="relative top-3">u</span>
@@ -109,17 +111,22 @@ export default function Uebok() {
           <span className="font-bold text-red-600 uppercase tracking-tighter text-2xl relative top-1">
             die
           </span>{" "}
-          <FontAwesomeIcon icon={faSkullCrossbones} /> now.
+          <FaSkullCrossbones /> now.
           <br />
         </p>
         <p className="relative top-28">
-          Holy <FontAwesomeIcon icon={faPoo} className="text-red-500" />, holy{" "}
-          <FontAwesomeIcon
-            icon={faPoo}
-            className="text-yellow-500 text-3xl relative top-3"
-          />
+          Holy{" "}
+          <div className="text-red-500">
+            <FaPoo />
+          </div>
+          , holy{" "}
+          <div className="text-yellow-500 text-3xl relative top-3">
+            <FaPoo />
+          </div>
           , yeah I, gotta run{" "}
-          <FontAwesomeIcon icon={faRunning} className="relative left-16" />
+          <div className="relative left-16">
+            <FaRunning />
+          </div>
           <br />
           Make a hit,{" "}
           <span className="relative -left-16 top-1">make a hit,</span>
@@ -133,24 +140,31 @@ export default function Uebok() {
           </span>
           <br />
           <span className="relative -left-8">
-            Holy <FontAwesomeIcon icon={faPoo} className="text-green-500" />,
-            holy <FontAwesomeIcon icon={faPoo} className="text-blue-500" />,
-            it's a{" "}
+            Holy{" "}
+            <div className="text-green-500">
+              <FaPoo />
+            </div>
+            , holy{" "}
+            <div className="text-blue-500">
+              <FaPoo />
+            </div>
+            , it's a{" "}
             <span className="uppercase tracking-widest font-bold italic relative top-1 left-1">
               hit
             </span>
             and run{" "}
-            <FontAwesomeIcon icon={faRunning} className="relative left-12" />
-            <FontAwesomeIcon icon={faRunning} className="relative" />
+            <div className="relative left-12">
+              <FaRunning />
+            </div>
+            <div className="relative">
+              <FaRunning />
+            </div>
           </span>
           <br />
           <span className="relative left-12 -top-2">Make a hit,</span> make a
           hit, like a machine gun{" "}
-          <span>
-            <FontAwesomeIcon
-              icon={faFlagUsa}
-              className="text-xl relative top-3"
-            />
+          <span className="text-xl relative top-3">
+            <FaFlagUsa />
           </span>
           <br />
         </p>

@@ -1,10 +1,4 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faGithub,
-  faInstagram,
-  faTwitter,
-  faYoutube,
-} from "@fortawesome/free-brands-svg-icons";
+import { FaGithub, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
 
 export default function Footer() {
   return (
@@ -15,28 +9,28 @@ export default function Footer() {
           target="_blank"
           className="hover:text-brand transition"
         >
-          <FontAwesomeIcon icon={faInstagram} />
+          <FaInstagram />
         </a>
         <a
           href="https://www.youtube.com/feilvan"
           target="_blank"
           className="hover:text-brand transition"
         >
-          <FontAwesomeIcon icon={faYoutube} />
+          <FaYoutube />
         </a>
         <a
           href="https://www.twitter.com/feilvan"
           target="_blank"
           className="hover:text-brand transition"
         >
-          <FontAwesomeIcon icon={faTwitter} />
+          <FaTwitter />
         </a>
         <a
-          href="https://www.instagram.com/feilvan"
+          href="https://github.com/feilvan"
           target="_blank"
           className="hover:text-brand transition"
         >
-          <FontAwesomeIcon icon={faGithub} />
+          <FaGithub />
         </a>
       </div>
       <div className="mt-2">
