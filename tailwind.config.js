@@ -5,6 +5,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screen: {
+        mx: "1152px",
+      },
       colors: {
         brand: {
           DEFAULT: "#4b5dff",

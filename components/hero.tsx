@@ -2,7 +2,7 @@ import { FaArrowDown, FaArrowUp, FaTimes, FaUndo } from "react-icons/fa";
 
 export default function Hero() {
   return (
-    <div className="h-screen  relative">
+    <div className="h-screen overflow-hidden lg:overflow-visible relative">
       <div className="text-gray-200 text-[19rem] sm:text-[22rem] lg:text-[24rem]">
         <div className="absolute -top-24 -right-16 flex flex-row -space-x-6">
           <FaArrowUp />
