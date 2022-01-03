@@ -9,7 +9,7 @@ class MyDocument extends Document {
             rel="preload"
             href="/fonts/ReadexPro-var.ttf"
             as="font"
-            type="font/ttf"
+            type="font/truetype"
             crossOrigin="anonymous"
           />
           <link
