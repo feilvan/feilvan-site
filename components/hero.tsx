@@ -27,7 +27,7 @@ export default function Hero() {
         <h1 className="font-readex font-bold text-brand text-8xl tracking-tighter">
           feilvan
         </h1>
-        <div className="mt-4  tracking-widest font-inter text-sm text-gray-600 space-y-1">
+        <div className="mt-4  tracking-widest font-inter font text-sm text-gray-600 space-y-1">
           <h1>digital imaging</h1>
           <h1>3d environment</h1>
           <h1>front-end</h1>

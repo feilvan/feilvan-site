@@ -9,19 +9,19 @@ export default function Navbar() {
         <div className="flex justify-between space-x-12">
           <Link href="/">
             <a className={router.pathname == "/" ? "navbar-active" : ""}>
-              <a className="py-6">Home</a>
+              Home
             </a>
           </Link>
           <Link href="/portfolio">
             <a
               className={router.pathname == "/portfolio" ? "navbar-active" : ""}
             >
-              <a className="py-6">Portfolio</a>
+              Portfolio
             </a>
           </Link>
           <Link href="/about">
             <a className={router.pathname == "/about" ? "navbar-active" : ""}>
-              <a className="py-6">About</a>
+              About
             </a>
           </Link>
         </div>

@@ -5,14 +5,20 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          <style>
-            @import
-            url('https://fonts.googleapis.com/css2?family=Readex+Pro&display=swap');
-          </style>
-          <style>
-            @import
-            url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
-          </style>
+          <link
+            rel="preload"
+            href="/fonts/ReadexPro-var.ttf"
+            as="font"
+            type="font/ttf"
+            crossOrigin="anonymous"
+          />
+          <link
+            rel="preload"
+            href="/fonts/Inter-var.woff2"
+            as="font"
+            type="font/woff2"
+            crossOrigin="anonymous"
+          />
         </Head>
         <body className="bg-gray-100">
           <Main />
