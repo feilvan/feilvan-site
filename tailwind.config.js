@@ -1,3 +1,5 @@
+const { fontFamily } = require("tailwindcss/defaultTheme");
+
 module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
@@ -11,8 +13,8 @@ module.exports = {
         },
       },
       fontFamily: {
-        readex: "Readex Pro, sans-serif",
-        inter: "Inter, sans-serif",
+        readex: ["Readex Pro", ...fontFamily.sans],
+        inter: ["Inter", ...fontFamily.sans],
       },
     },
   },
