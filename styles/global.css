@@ -4,6 +4,6 @@
 
 @layer components {
   .navbar-active {
-    @apply text-brand font-bold;
+    @apply text-brand;
   }
 }
