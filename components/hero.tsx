@@ -21,7 +21,7 @@ export default function Hero() {
         <p className="qt pl-12 mb-4 text-xl text-gray-500 tracking-wider">
           feilvan
         </p>
-        <h1 className="font-readex font-bold text-brand text-7xl sm:text-8xl lg:text-9xl tracking-tighter">
+        <h1 className="font-readex font-bold text-brand tagline sm:text-8xl lg:text-9xl tracking-tighter">
           Reality
           <br />
           Reimagined

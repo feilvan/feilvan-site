@@ -40,4 +40,9 @@
   .react-icons {
     vertical-align: middle;
   }
+
+  .tagline {
+    font-size: 15vw;
+    line-height: 15vw;
+  }
 }
