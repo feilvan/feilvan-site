@@ -25,7 +25,7 @@ export default function Hero() {
       </div>
       <div className="absolute bottom-20 left-6">
         <h1 className="font-readex font-bold text-brand text-8xl tracking-tighter">
-          feilvan
+          feil<span className="font-inter">van</span>
         </h1>
         <div className="mt-4  tracking-widest font-inter font text-sm text-gray-600 space-y-1">
           <h1>digital imaging</h1>
