@@ -3,7 +3,26 @@
 @tailwind utilities;
 
 @layer components {
+  @font-face {
+    font-family: "Inter";
+    font-style: normal;
+    font-display: swap;
+    src: url("/fonts/Inter-var.woff2") format("woff2");
+  }
+
+  @font-face {
+    font-family: "ReadexPro";
+    font-style: normal;
+    font-display: swap;
+    src: url("/fonts/ReadexPro-var.ttf") format("ttf");
+  }
+
   .navbar-active {
     @apply text-brand;
+  }
+
+  body,
+  .body {
+    @apply font-inter;
   }
 }
