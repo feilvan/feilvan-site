@@ -11,7 +11,7 @@ module.exports = {
         },
       },
       fontFamily: {
-        readex: ["Readex Pro", "sans-serif"],
+        readex: ["ReadexPro", "sans-serif"],
         inter: ["Inter", "sans-serif"],
       },
     },
