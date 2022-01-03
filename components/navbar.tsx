@@ -25,11 +25,6 @@ export default function Navbar() {
               About
             </a>
           </Link>
-          <Link href="/uebok">
-            <a className={router.pathname == "/uebok" ? "navbar-active" : ""}>
-              <FaPoo />
-            </a>
-          </Link>
         </div>
       </div>
     </div>
