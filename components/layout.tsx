@@ -1,9 +1,10 @@
 import Head from "next/head";
 import Link from "next/link";
 import Navbar from "./navbar";
+import Footer from "./footer";
 
 const name = "****";
-export const siteTitle = "Next.js Sample Website";
+export const siteTitle = "feilvan";
 
 export default function Layout({
   children,
@@ -30,7 +31,7 @@ export default function Layout({
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <Navbar />
-      <div className="max-w-5xl mx-auto">
+      <div className="max-w-6xl mx-auto">
         <main>{children}</main>
         {!home && (
           <div className="mt-4 ml-4">
@@ -39,6 +40,7 @@ export default function Layout({
             </Link>
           </div>
         )}
+        <Footer />
       </div>
     </div>
   );

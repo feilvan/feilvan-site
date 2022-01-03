@@ -24,6 +24,16 @@
 
   body,
   .body {
-    @apply font-inter;
+    @apply font-inter text-gray-800;
+  }
+
+  .qt::before {
+    @apply bg-gray-400;
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 0;
+    width: 36px;
+    height: 2px;
   }
 }

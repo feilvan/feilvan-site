@@ -1,5 +1,4 @@
 import Layout from "../components/layout";
-import Uebok from "../components/uebok";
 
 export default function About() {
   return (
@@ -12,7 +11,6 @@ export default function About() {
           </h1>
         </div>
       </Layout>
-      <Uebok />
     </div>
   );
 }

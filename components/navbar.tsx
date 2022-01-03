@@ -1,10 +1,12 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPoo } from "@fortawesome/free-solid-svg-icons";
 
 export default function Navbar() {
   const router = useRouter();
   return (
-    <div className="sticky top-0 z-10 backdrop-blur-md">
+    <div className="sticky top-0 z-10 backdrop-blur-md bg-gray-100/60">
       <div className="layout flex flex-col items-center py-6 font-readex font-semibold text-sm mx-auto max-w-5xl ">
         <div className="flex justify-between space-x-12">
           <Link href="/">
@@ -22,6 +24,11 @@ export default function Navbar() {
           <Link href="/about">
             <a className={router.pathname == "/about" ? "navbar-active" : ""}>
               About
+            </a>
+          </Link>
+          <Link href="/uebok">
+            <a className={router.pathname == "/uebok" ? "navbar-active" : ""}>
+              <FontAwesomeIcon icon={faPoo} />
             </a>
           </Link>
         </div>
