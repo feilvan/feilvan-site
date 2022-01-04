@@ -1,9 +1,23 @@
-import { FaGithub, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
+import {
+  FaEnvelope,
+  FaGithub,
+  FaInstagram,
+  FaLinkedin,
+  FaTwitter,
+  FaYoutube,
+} from "react-icons/fa";
 
 export default function Footer() {
   return (
     <div className="flex flex-col items-center mt-6 py-6 border-t-2">
       <div className="flex flex-row text-2xl space-x-3">
+        <a
+          href="mailto:feilanfeilvan@gmail.com"
+          target="_blank"
+          className="hover:text-brand transition"
+        >
+          <FaEnvelope />
+        </a>
         <a
           href="https://www.instagram.com/feilvan"
           target="_blank"
@@ -24,6 +38,13 @@ export default function Footer() {
           className="hover:text-brand transition"
         >
           <FaTwitter />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/fuad-elhasan-irfani/"
+          target="_blank"
+          className="hover:text-brand transition"
+        >
+          <FaLinkedin />
         </a>
         <a
           href="https://github.com/feilvan"

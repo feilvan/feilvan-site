@@ -31,7 +31,7 @@ export default function Layout({
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <Navbar />
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-7xl mx-auto">
         <main>{children}</main>
         {!home && (
           <div className="mt-4 ml-4">
