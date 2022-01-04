@@ -9,7 +9,7 @@ import Contact from "./contact";
 
 export default function Hero() {
   return (
-    <div className="h-screen -mt-16">
+    <div className="h-screen -mt-20">
       <div className="flex flex-col justify-center h-full overflow-x-hidden lg:overflow-x-visible relative top-20">
         <div className="relative -top-[22rem]">
           <div className="text-gray-200 text-[19rem] sm:text-[22rem] lg:text-[24rem] relative top-12">
