@@ -5,7 +5,7 @@ import { FaPoo } from "react-icons/fa";
 export default function Navbar() {
   const router = useRouter();
   return (
-    <div className="sticky w-full top-0 z-10 backdrop-blur-md bg-gray-100/60">
+    <div className="sticky w-full top-0 z-20 backdrop-blur-md bg-gray-100/60">
       <div className="layout flex flex-col items-center py-6 font-readex font-semibold text-sm mx-auto max-w-5xl ">
         <div className="flex justify-between space-x-12">
           <Link href="/">

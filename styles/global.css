@@ -45,4 +45,16 @@
     font-size: 15vw;
     line-height: 15vw;
   }
+
+  .contact-btn {
+    @apply flex flex-row py-2 px-4 rounded-md transition;
+  }
+
+  .contact-hover {
+    @apply bg-gray-200/50;
+  }
+
+  .contact-icon {
+    @apply my-auto mr-4 text-xl text-brand;
+  }
 }
