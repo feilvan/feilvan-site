@@ -9,8 +9,8 @@ import {
 
 export default function Footer() {
   return (
-    <div className="flex flex-col items-center mt-6 py-6 border-t-2">
-      <div className="flex flex-row text-2xl space-x-3">
+    <div className="flex flex-col items-center">
+      <div className="flex flex-row text-2xl space-x-3 px-3 pt-6 border-t-2 border-gray-200">
         <a
           href="mailto:feilanfeilvan@gmail.com"
           target="_blank"
@@ -54,9 +54,9 @@ export default function Footer() {
           <FaGithub />
         </a>
       </div>
-      <div className="mt-2">
+      <div className="mt-4 mb-8">
         <h1 className="font-inter text-sm text-gray-400 tracking-wide">
-          Made with **** by feilvan
+          © Fuad Elhasan Irfani 2022
         </h1>
       </div>
     </div>

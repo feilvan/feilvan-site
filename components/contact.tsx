@@ -11,7 +11,7 @@ export default function Contact() {
         </a>
       </Link>
       <Popover className="relative w-full flex flex-col sm:flex-row">
-        <Popover.Button className="py-2 px-6 bg-gray-100 text-brand border-2 border-brand rounded-md hover:shadow-lg hover:shadow-brand/30 transition">
+        <Popover.Button className="py-2 px-6 bg-gray-100 dark:bg-gray-900 text-brand border-2 border-brand rounded-md hover:shadow-lg hover:shadow-brand/30 transition">
           Contact
         </Popover.Button>
         <Transition
@@ -22,33 +22,20 @@ export default function Contact() {
           leaveFrom="transform scale-100 opacity-100"
           leaveTo="transform scale-95 opacity-0"
         >
-          <div className="visible sm:invisible">
-            <Pop />
-          </div>
-          <div className="invisible sm:visible">
-            <PopSm />
-          </div>
+          <Popover.Panel
+            className="absolute flex flex-col w-max z-10 ml-0 sm:ml-4 mt-2 sm:-mt-16 py-2 px-2
+    bg-gray-100 dark:bg-gray-900 rounded-md border-2 border-gray-200 dark:border-gray-800 shadow-lg shadow-gray-200 dark:shadow-gray-800"
+          >
+            <div className="hidden sm:inline">
+              <div className="py-2 px-4">
+                For business inquiry I prefer via email.
+              </div>
+            </div>
+            <PopBtn />
+          </Popover.Panel>
         </Transition>
       </Popover>
     </div>
-  );
-}
-
-function Pop() {
-  return (
-    <Popover.Panel className="absolute flex flex-col w-[90vw] sm:w-max z-10 ml-0 sm:ml-4 mt-2 sm:-mt-16 py-2 px-2 bg-gray-100 rounded-md border-2 border-gray-200 shadow-lg shadow-gray-200">
-      <div className="py-2 px-4">For business inquiry I prefer via email.</div>
-      <PopBtn />
-    </Popover.Panel>
-  );
-}
-
-function PopSm() {
-  return (
-    <Popover.Panel className="absolute flex flex-col w-[90vw] sm:w-max z-10 ml-0 sm:ml-4 mt-2 sm:-mt-16 py-2 px-2 bg-gray-100 rounded-md border-2 border-gray-200 shadow-lg shadow-gray-200">
-      <div className="py-2 px-4">For business inquiry I prefer via email.</div>
-      <PopBtn />
-    </Popover.Panel>
   );
 }
 
@@ -57,16 +44,25 @@ function PopBtn() {
     <div>
       <a
         href="mailto:feilanfeilvan@gmail.com"
+        target="_blank"
         className="contact-btn hover:contact-hover"
       >
         <FaEnvelope className="contact-icon" />
         Email
       </a>
-      <a href="/engagement" className="contact-btn hover:contact-hover">
+      <a
+        href="https://www.instagram.com/feilvan"
+        target="_blank"
+        className="contact-btn hover:contact-hover"
+      >
         <FaInstagram className="contact-icon" />
         Instagram
       </a>
-      <a href="/security" className="contact-btn hover:contact-hover">
+      <a
+        href="https://www.twitter.com/feilvan"
+        target="_blank"
+        className="contact-btn hover:contact-hover"
+      >
         <FaTwitter className="contact-icon" />
         Twitter
       </a>

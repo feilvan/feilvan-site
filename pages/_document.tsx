@@ -20,10 +20,10 @@ class MyDocument extends Document {
             crossOrigin="anonymous"
           />
         </Head>
-        <body className="bg-gray-100 overflow-x-hidden">
+        <div>
           <Main />
           <NextScript />
-        </body>
+        </div>
       </Html>
     );
   }

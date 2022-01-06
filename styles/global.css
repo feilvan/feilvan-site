@@ -24,11 +24,11 @@
 
   body,
   .body {
-    @apply font-inter text-gray-800;
+    @apply bg-gray-100 dark:bg-gray-900 overflow-x-hidden font-inter text-gray-600 dark:text-gray-400 children:transition transition;
   }
 
   .qt::before {
-    @apply bg-gray-400;
+    @apply bg-gray-600 dark:bg-gray-400;
     content: "";
     position: absolute;
     top: 15px;
@@ -51,10 +51,10 @@
   }
 
   .contact-hover {
-    @apply bg-gray-200/50;
+    @apply bg-brand text-white;
   }
 
   .contact-icon {
-    @apply my-auto mr-4 text-xl text-brand;
+    @apply my-auto mr-4 text-xl;
   }
 }
