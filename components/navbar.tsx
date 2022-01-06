@@ -36,7 +36,7 @@ export default function Navbar() {
           </Link>
           <button
             type="button"
-            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+            onClick={() => setTheme(theme === "light" ? "dark" : "light")}
             className="px-3 py-2 rounded-md hover:bg-brand hover:text-white transition"
           >
             {theme === "light" ? <FaMoon size={15} /> : <FaSun size={15} />}
