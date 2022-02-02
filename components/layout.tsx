@@ -30,8 +30,7 @@ export default function Layout({
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      <Navbar />
-      <div className="max-w-7xl mx-auto">
+      <div className="mx-8">
         <main>{children}</main>
         {!home && (
           <div className="mt-4 ml-4">

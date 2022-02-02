@@ -3,32 +3,26 @@
 @tailwind utilities;
 
 @layer components {
-  @font-face {
-    font-family: "Inter";
-    font-weight: 100 900;
-    font-style: normal;
-    font-display: swap;
-    src: url("/fonts/Inter-var.woff2") format("woff2");
-  }
-
-  @font-face {
-    font-family: "ReadexPro";
-    font-style: normal;
-    font-display: swap;
-    src: url("/fonts/ReadexPro-var.ttf") format("truetype");
-  }
-
   .navbar-active {
     @apply text-brand;
   }
 
   body,
   .body {
-    @apply bg-gray-100 dark:bg-gray-900 overflow-x-hidden font-inter text-gray-600 dark:text-gray-400 children:transition transition;
+    @apply bg-white dark:bg-black overflow-x-hidden font-heros text-3xl text-black dark:text-white tracking-tight children:transition transition;
+  }
+
+  a {
+    @apply hover:underline;
+  }
+
+  .text-outline {
+    @apply text-transparent;
+    -webkit-text-stroke: 2px white;
   }
 
   .qt::before {
-    @apply bg-gray-600 dark:bg-gray-400;
+    @apply bg-neutral-600 dark:bg-neutral-400;
     content: "";
     position: absolute;
     top: 15px;

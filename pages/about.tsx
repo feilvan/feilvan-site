@@ -5,7 +5,7 @@ export default function About() {
     <div>
       <Layout>
         <div className="flex flex-col items-center">
-          <h1 className="mt-4 text-3xl font-inter">
+          <h1 className="mt-4 text-3xl">
             This is{" "}
             <span className="text-brand font-bold font-readex">About</span> page
           </h1>

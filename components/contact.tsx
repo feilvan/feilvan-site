@@ -11,7 +11,7 @@ export default function Contact() {
         </a>
       </Link>
       <Popover className="relative w-full flex flex-col sm:flex-row">
-        <Popover.Button className="py-2 px-6 bg-gray-100 dark:bg-gray-900 text-brand border-2 border-brand rounded-md hover:shadow-lg hover:shadow-brand/30 transition">
+        <Popover.Button className="py-2 px-6 bg-neutral-100 dark:bg-neutral-900 text-brand border-2 border-brand rounded-md hover:shadow-lg hover:shadow-brand/30 transition">
           Contact
         </Popover.Button>
         <Transition
@@ -24,7 +24,7 @@ export default function Contact() {
         >
           <Popover.Panel
             className="absolute flex flex-col w-max z-10 ml-0 sm:ml-4 mt-2 sm:-mt-16 py-2 px-2
-    bg-gray-100 dark:bg-gray-900 rounded-md border-2 border-gray-200 dark:border-gray-800 shadow-lg shadow-gray-200 dark:shadow-gray-800"
+    bg-neutral-100 dark:bg-neutral-900 rounded-md border-2 border-neutral-200 dark:border-neutral-800 shadow-lg shadow-neutral-200 dark:shadow-neutral-800"
           >
             <div className="hidden sm:inline">
               <div className="py-2 px-4">

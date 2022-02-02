@@ -8,7 +8,7 @@ export default function Navbar() {
   const router = useRouter();
   const { theme, setTheme } = useTheme();
   return (
-    <div className="sticky mx-auto w-full top-0 z-20 py-2 backdrop-blur-lg bg-gray-100/70 dark:bg-gray-900/70">
+    <div className="sticky mx-auto w-full top-0 z-20 py-2 backdrop-blur-lg bg-neutral-100/70 dark:bg-neutral-900/70">
       <div className="layout flex flex-col items-center font-semibold text-sm mx-auto max-w-5xl ">
         <div className="flex justify-between space-x-1">
           <Link href="/">

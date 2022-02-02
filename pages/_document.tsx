@@ -6,18 +6,28 @@ class MyDocument extends Document {
       <Html>
         <Head>
           <link
-            rel="preload"
-            href="/fonts/ReadexPro-var.ttf"
-            as="font"
-            type="font/truetype"
-            crossOrigin="anonymous"
+            rel="stylesheet"
+            href="/fonts/texGyreHeros/texgyreheros_bold_macroman/stylesheet.css"
+            type="text/css"
+            charSet="utf-8"
           />
           <link
-            rel="preload"
-            href="/fonts/Inter-var.woff2"
-            as="font"
-            type="font/woff2"
-            crossOrigin="anonymous"
+            rel="stylesheet"
+            href="/fonts/texGyreHeros/texgyreheros_bolditalic_macroman/stylesheet.css"
+            type="text/css"
+            charSet="utf-8"
+          />
+          <link
+            rel="stylesheet"
+            href="/fonts/texGyreHeros/texgyreheros_italic_macroman/stylesheet.css"
+            type="text/css"
+            charSet="utf-8"
+          />
+          <link
+            rel="stylesheet"
+            href="/fonts/texGyreHeros/texgyreheros_regular_macroman/stylesheet.css"
+            type="text/css"
+            charSet="utf-8"
           />
         </Head>
         <div>
