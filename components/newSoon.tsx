@@ -5,7 +5,10 @@ export default function NewSoon() {
     <div className="h-[50vh] max-w-full flex">
       <div className="my-auto mx-auto">
         <div className="font-herosBold text-[9vw] md:text-[5rem]">
-          work <span className="font-herosBoldItalic text-outline">in</span>{" "}
+          work{" "}
+          <span className="font-herosBoldItalic text-outline-black dark:text-outline-white">
+            in
+          </span>{" "}
           progress...
         </div>
         <a

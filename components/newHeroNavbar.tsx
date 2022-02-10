@@ -8,7 +8,7 @@ import {
 export default function NewHeroNavbar() {
   return (
     <div>
-      <div className="absolute bottom-0 w-full flex flex-row py-4 justify-between bg-black/80 visible lg:invisible">
+      <div className="absolute bottom-0 w-full flex flex-row py-4 justify-between bg-white/80 dark:bg-black/80 visible lg:invisible">
         <span className="my-auto flex flex-row space-x-2">
           <FaArrowUp size={20} />
           <FaArrowDown size={20} />
@@ -18,7 +18,7 @@ export default function NewHeroNavbar() {
           feilvan
         </span>
       </div>
-      <div className="flex flex-row py-4 justify-between bg-black/80 invisible lg:visible">
+      <div className="flex flex-row py-4 justify-between bg-white/80 dark:bg-black/80 invisible lg:visible">
         <div className="flex flex-row">
           <span className="my-auto flex flex-row space-x-2">
             <FaArrowUp size={20} />

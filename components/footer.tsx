@@ -1,7 +1,9 @@
 import { MdOutlineNorthEast } from "react-icons/md";
-import { FaArrowUp } from "react-icons/fa";
+import { FaArrowUp, FaMoon, FaSun } from "react-icons/fa";
+import { useTheme } from "next-themes";
 
 export default function Footer() {
+  const { theme, setTheme } = useTheme();
   return (
     <div className="">
       <div className="relative sm:absolute bottom-0 flex flex-col place-items-center py-4 border-t-[1px] visible sm:invisible space-y-2">
@@ -21,10 +23,17 @@ export default function Footer() {
             Source code
             {<MdOutlineNorthEast size={20} className="ml-2 my-auto" />}
           </a>
+          <button
+            type="button"
+            onClick={() => setTheme(theme === "light" ? "dark" : "light")}
+            className="px-2 rounded-sm border-[1px] border-transparent hover:border-black dark:hover:border-white transition"
+          >
+            {theme === "light" ? <FaMoon size={15} /> : <FaSun size={15} />}
+          </button>
         </div>
         <div>© {new Date().getFullYear()} Fuad Elhasan Irfani</div>
       </div>
-      <div className="absolute sm:relative bottom-0 flex flex-row py-4 border-t-[1px] invisible sm:visible">
+      <div className="absolute sm:relative bottom-0 flex flex-row py-4 border-t-[1px] border-black dark:border-white invisible sm:visible">
         <div className="basis-1/2">
           © {new Date().getFullYear()} Fuad Elhasan Irfani
         </div>
@@ -46,6 +55,13 @@ export default function Footer() {
               {<MdOutlineNorthEast size={20} className="ml-2 my-auto" />}
             </a>
           </div>
+          <button
+            type="button"
+            onClick={() => setTheme(theme === "light" ? "dark" : "light")}
+            className="px-3 py-2 rounded-sm border-[1px] border-transparent hover:border-black dark:hover:border-white transition"
+          >
+            {theme === "light" ? <FaMoon size={15} /> : <FaSun size={15} />}
+          </button>
         </div>
       </div>
     </div>

@@ -16,9 +16,14 @@
     @apply hover:underline;
   }
 
-  .text-outline {
+  .text-outline-white {
     @apply text-transparent;
     -webkit-text-stroke: 1px white;
+  }
+
+  .text-outline-black {
+    @apply text-transparent;
+    -webkit-text-stroke: 1px #888;
   }
 
   .qt::before {
