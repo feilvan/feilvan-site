@@ -4,7 +4,7 @@ export default function NewSoon() {
   return (
     <div className="h-[50vh] max-w-full flex">
       <div className="my-auto mx-auto">
-        <div className="font-herosBold text-[5rem]">
+        <div className="font-herosBold text-[5vw]">
           work <span className="font-herosBoldItalic text-outline">in</span>{" "}
           progress...
         </div>
