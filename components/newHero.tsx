@@ -7,7 +7,10 @@ export default function NewHero() {
   return (
     <div className="h-screen max-w-full flex flex-col overflow-hidden">
       <NewHeroStatusbar />
-      <img src="/images/banner.jpg" className="object-cover h-[65vh]" />
+      <img
+        src="/images/banner.jpg"
+        className="object-cover h-[80vh] lg:h-[65vh]"
+      />
       <div className="mx-auto -mt-[10rem] flex flex-col font-herosBoldItalic text-[10vw] 2xl:text-[10rem] uppercase tracking-tighter space-y-[5vw] xl:space-y-[6vw] 2xl:space-y-[6rem]">
         <p className="text-left text-outline -ml-0 2xl:-ml-[5rem]">3dcg</p>
         <p>Digital Imaging</p>
