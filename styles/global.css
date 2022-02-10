@@ -35,11 +35,6 @@
     vertical-align: middle;
   }
 
-  .tagline {
-    font-size: 15vw;
-    line-height: 15vw;
-  }
-
   .contact-btn {
     @apply flex flex-row py-2 px-4 rounded-md transition;
   }
