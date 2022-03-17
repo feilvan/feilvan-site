@@ -2,15 +2,7 @@ import Head from "next/head";
 import Layout, { siteTitle } from "../components/layout";
 import Links from "../components/links";
 
-export default function Home({
-  allPostsData,
-}: {
-  allPostsData: {
-    date: string;
-    title: string;
-    id: string;
-  }[];
-}) {
+export default function Home() {
   return (
     <div>
       <Layout home>
