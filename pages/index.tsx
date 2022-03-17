@@ -1,20 +1,9 @@
 import Head from "next/head";
 import Layout, { siteTitle } from "../components/layout";
-import { getSortedPostsData } from "../lib/posts";
-import { GetStaticProps } from "next";
-import Hero from "../components/hero";
 import NewHero from "../components/newHero";
 import NewSoon from "../components/newSoon";
 
-export default function Home({
-  allPostsData,
-}: {
-  allPostsData: {
-    date: string;
-    title: string;
-    id: string;
-  }[];
-}) {
+export default function Home() {
   return (
     <div>
       <Layout home>
@@ -27,12 +16,3 @@ export default function Home({
     </div>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  const allPostsData = getSortedPostsData();
-  return {
-    props: {
-      allPostsData,
-    },
-  };
-};
