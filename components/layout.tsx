@@ -3,7 +3,7 @@ import Link from "next/link";
 import Footer from "./footer";
 
 const name = "****";
-export const siteTitle = "feilvan";
+export const siteTitle = "feilvan - links";
 
 export default function Layout({
   children,
