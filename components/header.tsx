@@ -17,7 +17,7 @@ export default function Header() {
           FEILVAN
         </div>
         <div className=" mt-1 tracking-wide">Digital Imaging Artist</div>
-        <div className=" mt-1 text-xs text-neutral-500 tracking-wide">
+        <div className=" mt-1 text-sm text-neutral-500 tracking-wide">
           Banyuwangi, Indonesia
         </div>
       </div>
