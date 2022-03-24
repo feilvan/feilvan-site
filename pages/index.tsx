@@ -1,7 +1,8 @@
 import Head from "next/head";
 import Layout, { siteTitle } from "../components/layout";
-import Links from "../components/links";
 import Header from "../components/header";
+import Links from "../components/links";
+import Footer from "../components/footer";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
         </Head>
         <Header />
         <Links />
+        <Footer />
       </Layout>
     </div>
   );

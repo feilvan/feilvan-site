@@ -16,7 +16,7 @@ export default function Header() {
         <div className=" mt-8 font-herosBoldItalic text-3xl tracking-widest">
           FEILVAN
         </div>
-        <div className=" tracking-wide">Digital Imaging Artist</div>
+        <div className=" mt-1 tracking-wide">Digital Imaging Artist</div>
       </div>
     </div>
   );
