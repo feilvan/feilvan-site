@@ -9,7 +9,7 @@
 
   body,
   .body {
-    @apply bg-white dark:bg-black overflow-x-hidden font-heros text-lg md:text-3xl text-black dark:text-white tracking-tight children:transition transition;
+    @apply bg-white dark:bg-black overflow-x-hidden font-heros text-black dark:text-white tracking-tight children:transition transition;
   }
 
   a {

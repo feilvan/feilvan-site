@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Link from "next/link";
 
 export const siteTitle = "Links - FEILVAN";
 
@@ -24,7 +23,7 @@ export default function Layout({
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      <div className="mx-8">
+      <div>
         <main>{children}</main>
       </div>
     </div>
