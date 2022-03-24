@@ -5,7 +5,7 @@ import Links from "../components/links";
 export default function Home() {
   return (
     <div>
-      <Layout home>
+      <Layout>
         <Head>
           <title>{siteTitle}</title>
         </Head>
