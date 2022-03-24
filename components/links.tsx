@@ -1,5 +1,4 @@
 import { FaYoutube, FaShoppingCart } from "react-icons/fa";
-import Example from "./popover_example";
 
 const list = [
   {
@@ -35,8 +34,6 @@ export default function Links() {
           </div>
         </a>
       ))}
-
-      <Example />
     </div>
   );
 }
