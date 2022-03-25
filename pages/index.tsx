@@ -3,6 +3,7 @@ import Layout, { siteTitle } from "../components/layout";
 import Header from "../components/header";
 import Links from "../components/links";
 import Footer from "../components/footer";
+import Landing from "../components/landing";
 
 export default function Home() {
   return (
@@ -11,9 +12,7 @@ export default function Home() {
         <Head>
           <title>{siteTitle}</title>
         </Head>
-        <Header />
-        <Links />
-        <Footer />
+        <Landing />
       </Layout>
     </div>
   );

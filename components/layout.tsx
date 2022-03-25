@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-export const siteTitle = "Links - FEILVAN";
+export const siteTitle = "FEILVAN";
 
 export default function Layout({
   children,
