@@ -2,20 +2,24 @@ import { FaArrowUp, FaArrowDown, FaUndo } from "react-icons/fa";
 
 export default function Landing() {
   return (
-    <div className=" flex flex-col h-screen w-screen">
-      <div className=" text-center my-auto font-herosBold text-[9vw] sm:text-[3.6rem]">
-        work{" "}
-        <span className=" font-herosBoldItalic text-outline-white">in</span>{" "}
-        progress...
-      </div>
-      <div className=" mx-auto mb-4 space-x-1 flex flex-row text-neutral-500">
-        <div>© {new Date().getFullYear()} - </div>
-        <div className="my-auto flex flex-row">
-          <FaArrowUp size={15} />
-          <FaArrowDown size={15} />
-          <FaUndo size={15} />
+    <>
+      <div className=" flex flex-col h-screen w-screen">
+        <div className=" flex flex-col my-auto mx-auto ">
+          <div className="font-herosBold text-[9vw] sm:text-[3.6rem]">
+            work{" "}
+            <span className=" font-herosBoldItalic text-outline-white">in</span>{" "}
+            progress...
+          </div>
+          <div className="flex flex-row space-x-1 mx-auto mt-2 text-neutral-500">
+            <div>© {new Date().getFullYear()} - </div>
+            <div className="my-auto flex flex-row">
+              <FaArrowUp size={15} />
+              <FaArrowDown size={15} />
+              <FaUndo size={15} />
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
