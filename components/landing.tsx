@@ -1,8 +1,10 @@
 import { FaArrowUp, FaArrowDown, FaUndo } from "react-icons/fa";
+import Spinner from "./spinner";
 
 export default function Landing() {
   return (
     <>
+      <Spinner />
       <div className=" flex flex-col h-screen w-screen">
         <div className=" flex flex-col my-auto mx-auto ">
           <div className="font-herosBold text-[9vw] sm:text-[3.6rem]">
