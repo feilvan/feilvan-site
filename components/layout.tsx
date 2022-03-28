@@ -1,26 +1,13 @@
 import Head from "next/head";
-import Link from "next/link";
-import Navbar from "./navbar";
-import Footer from "./footer";
 
-const name = "****";
-export const siteTitle = "feilvan";
+export const siteTitle = "FEILVAN";
 
-export default function Layout({
-  children,
-  home,
-}: {
-  children: React.ReactNode;
-  home?: boolean;
-}) {
+export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div>
       <Head>
         <link rel="icon" href="/favicon.ico" />
-        <meta
-          name="description"
-          content="Learn how to build a personal website using Next.js"
-        />
+        <meta name="description" content="FEILVAN Portfolio Website" />
         <meta
           property="og:image"
           content={`https://og-image.vercel.app/${encodeURI(
@@ -32,14 +19,6 @@ export default function Layout({
       </Head>
       <div className="mx-8">
         <main>{children}</main>
-        {!home && (
-          <div className="mt-4 ml-4">
-            <Link href="/">
-              <a>← Back to home</a>
-            </Link>
-          </div>
-        )}
-        <Footer />
       </div>
     </div>
   );
