@@ -1,58 +1,42 @@
-import { useEffect, useRef, useState } from "react";
-import * as THREE from "three";
-import p5 from "p5";
-import NET from "vanta/dist/vanta.net.min";
-
+import Link from "next/link";
 import { FaArrowDown, FaArrowUp, FaUndo } from "react-icons/fa";
 
 export default function Hero() {
-  const [vantaEffect, setVantaEffect] = useState(0);
-  const vantaRef = useRef(null);
-  useEffect(() => {
-    if (!vantaEffect) {
-      setVantaEffect(
-        NET({
-          el: vantaRef.current,
-          THREE,
-          mouseControls: true,
-          touchControls: true,
-          gyroControls: false,
-          minHeight: 400.0,
-          minWidth: 400.0,
-          scale: 1.0,
-          scaleMobile: 1.0,
-          color: 0x555555,
-          backgroundColor: 0x0,
-          points: 3.0,
-          maxDistance: 30.0,
-        })
-      );
-    }
-  }, [vantaEffect]);
-
   return (
-    <div className=" flex flex-col h-screen" ref={vantaRef}>
-      <div className="flex flex-row justify-between w-full py-2 px-2 bg-black">
-        <div className=" flex flex-row space-x-2">
-          <div className=" flex flex-row my-auto">
-            <FaArrowUp />
-            <FaArrowDown />
-            <FaUndo />
+    <div className=" flex flex-col h-screen">
+      <div className=" fixed flex flex-row justify-between w-full mt-8 sm:mt-12 px-8 sm:px-14 z-50">
+        <Link href="/">
+          <div className=" flex flex-row space-x-8">
+            <div className=" flex flex-row my-auto space-x-1">
+              <FaArrowUp />
+              <FaArrowDown />
+              <FaUndo />
+            </div>
+            <div className="font-herosBoldItalic hidden sm:block tracking-normal hover:tracking-widest transition-all">
+              FEILVAN
+            </div>
           </div>
-          <div className="font-herosBoldItalic hidden sm:block">FEILVAN</div>
+        </Link>
+        <div className=" flex flex-row children:px-4">
+          <Link href="#works" scroll={false} replace>
+            <a>Works</a>
+          </Link>
+          <Link href="#contact" scroll={false} replace>
+            <a>Contact</a>
+          </Link>
         </div>
-        <div className=" ">Available for freelance work</div>
       </div>
+
       <div className="absolute h-full w-full grid place-items-center">
         <div>
-          <div className="font-herosBold text-5xl pb-4 border-b-2">
+          <div className="font-herosBold text-5xl sm:text-8xl pb-4 sm:pb-6 border-b-2 sm:border-b-4">
             Reality
             <br />
             Reimagined
           </div>
-          <div className="mt-3 text-base ">
-            <span className=" font-herosBold">FEILVAN</span> Digital Imaging
-            Artist
+          <div className="mt-3 font-herosItalic">
+            <span className=" font-herosBoldItalic">FEILVAN</span> Digital
+            Imaging Artist
           </div>
         </div>
       </div>

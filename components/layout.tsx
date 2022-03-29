@@ -17,7 +17,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      <main>{children}</main>
+      <main className="scroll-smooth">{children}</main>
     </div>
   );
 }
