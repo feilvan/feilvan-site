@@ -11,9 +11,9 @@ export default function Background() {
         NET({
           el: vantaRef.current,
           THREE,
-          highlightColor: 0x137daa,
-          midtoneColor: 0x9b259b,
-          lowlightColor: 0xbe1717,
+          highlightColor: 0x3939,
+          midtoneColor: 0x18145f,
+          lowlightColor: 0x891414,
           baseColor: 0x0,
           blurFactor: 0.9,
           speed: 3.0,

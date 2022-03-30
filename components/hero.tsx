@@ -4,7 +4,7 @@ import { FaArrowDown, FaArrowUp, FaUndo } from "react-icons/fa";
 export default function Hero() {
   return (
     <div className=" flex flex-col h-screen">
-      <div className=" fixed flex flex-row justify-between w-full mt-8 sm:mt-12 px-8 sm:px-14 z-50">
+      <div className=" fixed flex flex-row justify-between w-full py-8 md:py-12 px-8 md:px-14 z-50 bg-gradient-to-b from-black to-transparent">
         <Link href="/">
           <div className=" flex flex-row space-x-8">
             <div className=" flex flex-row my-auto space-x-1">
@@ -17,26 +17,26 @@ export default function Hero() {
             </div>
           </div>
         </Link>
-        <div className=" flex flex-row children:px-4">
+        <div className=" flex flex-row space-x-8">
           <Link href="#works" scroll={false} replace>
             <a>Works</a>
           </Link>
           <Link href="#contact" scroll={false} replace>
-            <a>Contact</a>
+            <a>Get in Touch</a>
           </Link>
         </div>
       </div>
 
       <div className="absolute h-full w-full grid place-items-center">
         <div>
-          <div className="font-herosBold text-5xl sm:text-8xl pb-4 sm:pb-6 border-b-2 sm:border-b-4">
+          <div className="font-herosBold text-[13vw] leading-[11vw] border-b-2 pb-[4vw]">
             Reality
             <br />
             Reimagined
           </div>
-          <div className="mt-3 font-herosItalic">
-            <span className=" font-herosBoldItalic">FEILVAN</span> Digital
-            Imaging Artist
+          <div className=" flex flex-row justify-between mt-2 md:mt-4 font-herosItalic">
+            <div>Freelance Digital Imaging Artist</div>
+            <div>Based in Banyuwangi, Indonesia</div>
           </div>
         </div>
       </div>

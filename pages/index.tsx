@@ -4,6 +4,7 @@ import Background from "../components/background";
 import Hero from "../components/hero";
 import Works from "../components/works";
 import Contact from "../components/contact";
+import BpIndicator from "../components/util/breakpointIndicator";
 
 export default function Home() {
   return (
