@@ -116,14 +116,18 @@ function Vertical() {
         </div>
         <div className="flex flex-col space-y-2">
           <a href="https://www.youtube.com/feilvan/" className=" flex flex-row">
-            YouTube - Editing Process
+            YouTube<span className="hidden sm:block"> - Editing Process</span>
             <BsArrowUpRight className=" ml-2 my-auto" />
           </a>
           <a
             href="https://www.teepublic.com/user/feilvan"
             className=" flex flex-row"
           >
-            TeePublic - T-shirt, phone cases, and more
+            TeePublic
+            <span className="hidden sm:block">
+              {" "}
+              - T-shirt, phone cases, and more
+            </span>
             <BsArrowUpRight className=" ml-2 my-auto" />
           </a>
         </div>
