@@ -13,7 +13,6 @@ export default function Home() {
         <Head>
           <title>{siteTitle}</title>
         </Head>
-        <BpIndicator />
         <Background />
         <Hero />
         <Works />
