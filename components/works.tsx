@@ -65,7 +65,7 @@ function Extend() {
       <div className=" my-20">
         <a
           href="http://instagram.com/feilvan"
-          className=" flex flex-row shadow-md shadow-neutral-900 border border-neutral-900 hover:border-neutral-500 rounded-md py-3 px-14 hover:px-16 bg-black text-base tracking-normal hover:tracking-wide hover:no-underline transition-all"
+          className=" flex flex-row shadow-md shadow-neutral-700/50 border border-neutral-700 hover:border-neutral-500 rounded-md py-3 px-14 hover:px-16 bg-black text-base tracking-normal hover:tracking-wide hover:no-underline transition-all"
         >
           More on Instagram <BsArrowUpRight className="ml-2 my-auto" />
         </a>

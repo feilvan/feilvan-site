@@ -3,7 +3,7 @@ import { BsArrowUpRight } from "react-icons/bs";
 
 export default function Contact() {
   return (
-    <div id="contact">
+    <div id="contact" className="bg-gradient-to-b from-black to-transparent">
       <div className=" hidden lg:flex flex-col items-center">
         <Horizontal />
       </div>

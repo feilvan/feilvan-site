@@ -3,7 +3,7 @@ import { FaArrowDown, FaArrowUp, FaUndo } from "react-icons/fa";
 
 export default function Hero() {
   return (
-    <div className=" flex flex-col h-screen">
+    <div className=" flex flex-col h-screen bg-gradient-to-t from-black via-transparent to-transparent">
       <div className=" fixed flex flex-row justify-between w-full py-8 md:py-12 px-8 md:px-14 z-50 bg-gradient-to-b from-black to-transparent">
         <Link href="/">
           <div className=" flex flex-row space-x-8">

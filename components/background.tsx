@@ -11,13 +11,13 @@ export default function Background() {
         NET({
           el: vantaRef.current,
           THREE,
-          highlightColor: 0x3939,
-          midtoneColor: 0x18145f,
-          lowlightColor: 0x891414,
+          highlightColor: 0xa5082,
+          midtoneColor: 0x600f82,
+          lowlightColor: 0x109179,
           baseColor: 0x0,
           blurFactor: 0.9,
           speed: 3.0,
-          zoom: 0.4,
+          zoom: 0.6,
         })
       );
     }
