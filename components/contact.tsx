@@ -26,13 +26,13 @@ function Horizontal() {
           </div>
           <div>© {new Date().getFullYear()} - Fuad Elhasan Irfani</div>
         </div>
-        <div className=" basis-1/2 xl:basis-1/3 flex flex-col space-y-8 children:w-max">
+        <div className=" basis-1/2 xl:basis-1/3 flex flex-col space-y-8">
           <div className="font-herosBold text-6xl">
             Get{" "}
             <span className=" text-outline-white font-herosBoldItalic">in</span>{" "}
             Touch
           </div>
-          <div className="flex flex-col space-y-3">
+          <div className="flex flex-col space-y-3 children:w-max">
             <a
               href="mailto:feilvanfeilvan@gmail.com"
               className=" flex flex-row"
@@ -56,9 +56,9 @@ function Horizontal() {
             </a>
           </div>
         </div>
-        <div className=" basis-1/2 xl:basis-1/3 flex flex-col space-y-8 children:w-max">
+        <div className=" basis-1/2 xl:basis-1/3 flex flex-col space-y-8 ">
           <div className="font-herosBold text-6xl">Misc</div>
-          <div className="flex flex-col space-y-2">
+          <div className="flex flex-col space-y-2 children:w-max">
             <a
               href="https://www.youtube.com/feilvan/"
               className=" flex flex-row"
@@ -86,13 +86,13 @@ function Horizontal() {
 function Vertical() {
   return (
     <div className=" flex flex-col space-y-14 px-6 sm:px-14 my-14 w-full">
-      <div className=" flex flex-col space-y-8 children:w-max">
+      <div className=" flex flex-col space-y-8 ">
         <div className="font-herosBold text-[9vw] leading-[7vw] sm:text-6xl">
           Get{" "}
           <span className=" text-outline-white font-herosBoldItalic">in</span>{" "}
           Touch
         </div>
-        <div className="flex flex-col space-y-3">
+        <div className="flex flex-col space-y-3 children:w-max">
           <a href="mailto:feilvanfeilvan@gmail.com" className=" flex flex-row">
             feilvanfeilvan@gmail.com
             <BsArrowUpRight className=" ml-2 my-auto" />
@@ -110,11 +110,11 @@ function Vertical() {
           </a>
         </div>
       </div>
-      <div className=" flex flex-col space-y-8 children:w-max">
+      <div className=" flex flex-col space-y-8 ">
         <div className="font-herosBold text-[9vw] leading-[7vw] sm:text-6xl">
           Misc
         </div>
-        <div className="flex flex-col space-y-2">
+        <div className="flex flex-col space-y-2 children:w-max">
           <a href="https://www.youtube.com/feilvan/" className=" flex flex-row">
             YouTube<span className="hidden sm:block"> - Editing Process</span>
             <BsArrowUpRight className=" ml-2 my-auto" />

@@ -23,7 +23,7 @@ export default function Works() {
         </div>
         <div className=" -mt-[100vh]">
           <div className="mt-32 flex flex-row w-full children:px-6 md:children:px-0">
-            <div className=" basis-1/2 flex flex-col items-center children:max-w-xs lg:children:max-w-sm space-y-20">
+            <div className=" basis-1/2 flex flex-col items-center children:overflow-visible children:max-w-xs lg:children:max-w-sm space-y-20">
               <div>
                 <Image src={w200315} placeholder="blur" />
               </div>
@@ -37,7 +37,7 @@ export default function Works() {
                 <Image src={w200919} placeholder="blur" />
               </div>
             </div>
-            <div className=" basis-1/2 flex flex-col items-center children:max-w-xs lg:children:max-w-sm space-y-20 mt-32">
+            <div className=" basis-1/2 flex flex-col items-center children:overflow-visible children:max-w-xs lg:children:max-w-sm space-y-20 mt-32">
               <div className=" mr-0 xl:mr-40">
                 <Image src={w200424} placeholder="blur" />
               </div>
