@@ -20,7 +20,7 @@ export default function Footer() {
           <FaInstagram size={28} />
         </a>
         <a
-          href="mailto:feilvanfeilvan@gmail.com"
+          href="mailto:hello@feilvan.art"
           target="_blank"
           className="my-auto hover:-translate-y-1 transition"
         >
