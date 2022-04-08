@@ -3,7 +3,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.1.1",
@@ -13,7 +14,9 @@
     "@fortawesome/react-fontawesome": "^0.1.18",
     "@headlessui/react": "^1.4.2",
     "babel-plugin-macros": "^3.1.0",
+    "circletype": "^2.3.0",
     "date-fns": "^2.27.0",
+    "eslint-plugin-next": "^0.0.0",
     "gray-matter": "^4.0.3",
     "gsap": "^3.10.0",
     "locomotive-scroll": "^4.1.4",
@@ -25,6 +28,7 @@
     "react-curtains": "^1.0.10",
     "react-dom": "17.0.2",
     "react-icons": "^4.3.1",
+    "react-parallax-mouse": "^1.6.1",
     "remark": "^14.0.2",
     "remark-html": "^15.0.1",
     "tailwindcss": "^3.0.7",
@@ -38,6 +42,8 @@
     "@types/p5": "^1.4.2",
     "@types/react": "^17.0.38",
     "@types/three": "^0.139.0",
+    "eslint": "8.12.0",
+    "eslint-config-next": "12.1.4",
     "typescript": "^4.5.4"
   }
 }

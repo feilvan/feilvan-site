@@ -1,9 +1,27 @@
 import Head from "next/head";
 import Navbar from "./navbar";
+import { useRef, useEffect } from "react";
 
 export const siteTitle = "FEILVAN";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
+  const scrollRef = useRef();
+
+  useEffect(() => {
+    if (typeof window === "undefined") {
+      return;
+    }
+
+    const scroll = import("locomotive-scroll").then((LocomotiveScroll) => {
+      new LocomotiveScroll.default({
+        el: scrollRef.current,
+        smooth: true,
+      });
+    });
+
+    // return () => scroll.destroy();
+  }, []);
+
   return (
     <div>
       <Head>
@@ -18,9 +36,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      <main data-scroll-container className="scroll-smooth">
+      <main data-scroll-container id="home" ref={scrollRef}>
         <Navbar />
-        {children}
+        <div className="overflow-hidden">{children}</div>
       </main>
     </div>
   );

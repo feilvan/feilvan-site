@@ -1,20 +1,74 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronRight, faEarthAsia } from "@fortawesome/free-solid-svg-icons";
+import {
+  MouseParallaxContainer,
+  MouseParallaxChild,
+} from "react-parallax-mouse";
+
 export default function Hero() {
   return (
-    <div className=" flex flex-col h-screen bg-gradient-to-t from-black via-transparent to-transparent">
-      <div className="absolute h-full w-full grid place-items-center">
+    <MouseParallaxContainer className=" flex relative h-screen w-screen">
+      <MouseParallaxChild
+        factorX={0.03}
+        factorY={0.1}
+        className=" absolute h-full w-full flex flex-row justify-between items-center px-14"
+      >
+        <LeftText />
+        <RightText />
+      </MouseParallaxChild>
+      <MouseParallaxChild
+        factorX={0.02}
+        factorY={0.06}
+        className=" flex absolute bottom-40 z-20"
+      >
         <div>
-          <div className="font-herosBold text-[13vw] leading-[11vw] border-b-2 pb-[4vw]">
-            Reality
-            <br />
-            Reimagined
-          </div>
-          <div className=" flex flex-row justify-between mt-2 md:mt-4 font-herosItalic">
-            <div>Freelance Digital Imaging Artist</div>
-            <div className=" hidden md:block">
-              Based in Banyuwangi, Indonesia
-            </div>
-          </div>
+          <BigText />
         </div>
+      </MouseParallaxChild>
+    </MouseParallaxContainer>
+  );
+}
+
+function BigText() {
+  return (
+    <div className=" flex flex-row children:big-text">
+      <div>
+        Reality Reimagined<span className=" px-28">—</span>
+      </div>
+      <div className="relative">
+        Reality Reimagined<span className=" px-28">—</span>
+      </div>
+    </div>
+  );
+}
+
+function LeftText() {
+  return (
+    <div className=" flex flex-col space-y-6">
+      <div>
+        <FontAwesomeIcon icon={faChevronRight} size="lg" />
+      </div>
+      <div className=" text-3xl">
+        Freelance
+        <br />
+        Digital Imaging
+        <br />
+        Artist
+      </div>
+    </div>
+  );
+}
+
+function RightText() {
+  return (
+    <div className="flex flex-col relative -bottom-20 space-y-6 items-end">
+      <div>
+        <FontAwesomeIcon icon={faEarthAsia} size="lg" />
+      </div>
+      <div className=" text-3xl text-right">
+        Based in
+        <br />
+        Indonesia
       </div>
     </div>
   );
