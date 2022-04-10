@@ -9,14 +9,49 @@ import w210622 from "../public/images/works/210622.jpg";
 import Image from "next/image";
 import { BsArrowUpRight } from "react-icons/bs";
 
+const list = [
+  {
+    title: "Twins",
+    date: 200509,
+    image: w200509,
+  },
+  {
+    title: "Twins",
+    date: 200509,
+    image: w200509,
+  },
+  {
+    title: "Twins",
+    date: 200509,
+    image: w200509,
+  },
+];
+
 export default function Works() {
   return (
-    <div id="works" className=" flex flex-row h-screen bg-black px-14">
-      <div className=" flex basis-1/2 items-center uppercase font-herosItalic tracking-widest text-base">
-        Personal Project
+    <div className="px-8 md:px-14 py-32">
+      <div className=" font-herosItalic text-base uppercase tracking-widest text-neutral-400 py-12">
+        Selected Personal Works
       </div>
-      <div className=" flex basis-1/2 items-center uppercase font-herosItalic tracking-widest text-base">
-        Clients & Collabs
+      <div id="works" className=" grid grid-cols-2 gap-10  bg-black">
+        {list.map((item) => (
+          <div key={item.date} className=" ">
+            <div className="">
+              <div className=" relative h-96">
+                <Image
+                  src={item.image}
+                  alt=""
+                  layout="fill"
+                  objectFit="cover"
+                />
+              </div>
+              <div className=" flex flex-row justify-between py-4">
+                <div>{item.title}</div>
+                <div>{item.date}</div>
+              </div>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );
