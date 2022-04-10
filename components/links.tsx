@@ -6,7 +6,6 @@ const list = [
     subtitle: "YouTube",
     href: "https://www.youtube.com/feilvan",
     icon: <FaYoutube size={28} />,
-    noinfo: " ",
   },
   {
     title: "T-shirt, phone cases, and more",
@@ -18,7 +17,6 @@ const list = [
 ];
 
 export default function Links() {
-  let isInfo = "";
   return (
     <div className="grid place-items-center mt-8 space-y-3">
       {list.map((item) => (
@@ -28,7 +26,6 @@ export default function Links() {
           className="w-[90vw] sm:w-[36rem] px-4 py-3 bg-neutral-900 hover:bg-transparent rounded-md border border-neutral-700
         hover:border-neutral-500 transition hover:no-underline "
         >
-          {(isInfo = item.noinfo)}
           <div className="flex flex-row justify-between">
             <div className="w-[80%] space-y-1">
               <div className="font-herosBold">{item.title}</div>
@@ -38,7 +35,7 @@ export default function Links() {
             </div>
             <div className="my-auto">{item.icon}</div>
           </div>
-          {!isInfo && (
+          {item.info && (
             <div className="flex flex-row px-2 py-2 mt-2 bg-white/10 rounded-md tracking-wide text-xs">
               <FaInfoCircle className="my-auto mr-2" />
               {item.info}
