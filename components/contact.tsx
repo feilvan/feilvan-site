@@ -1,139 +1,19 @@
 import { FaArrowDown, FaArrowUp, FaUndo } from "react-icons/fa";
 import { BsArrowUpRight } from "react-icons/bs";
+import LaxButton from "./util/LaxButton";
 
 export default function Contact() {
   return (
-    <div id="contact" className="bg-gradient-to-b from-black to-transparent">
-      <div className=" hidden lg:flex flex-col items-center">
-        <Horizontal />
-      </div>
-      <div className=" flex lg:hidden flex-col items-center">
-        <Vertical />
-      </div>
-    </div>
-  );
-}
-
-function Horizontal() {
-  return (
-    <div className=" flex flex-col space-y-14 w-full px-14 my-14">
-      <div className=" flex flex-row w-full">
-        <div className=" basis-1/3 hidden xl:flex flex-col space-y-8">
-          <div className="flex flex-row space-x-2 ">
-            <FaArrowUp size={100} />
-            <FaArrowDown size={100} />
-            <FaUndo size={100} />
+    <div id="contact" className="flex h-screen px-8 md:px-14">
+      <div className="flex flex-row items-center ">
+        <div className=" flex flex-col">
+          <div className="font-herosItalic text-8xl uppercase">
+            Let&apos;s Work Together
           </div>
-          <div>© {new Date().getFullYear()} - Fuad Elhasan Irfani</div>
+          <LaxButton>
+            <div className=" text-5xl">hello@feilvan.art</div>
+          </LaxButton>
         </div>
-        <div className=" basis-1/2 xl:basis-1/3 flex flex-col space-y-8">
-          <div className="font-herosBold text-6xl">
-            Get{" "}
-            <span className=" text-outline-white font-herosBoldItalic">in</span>{" "}
-            Touch
-          </div>
-          <div className="flex flex-col space-y-3 children:w-max">
-            <a
-              href="mailto:feilvanfeilvan@gmail.com"
-              className=" flex flex-row"
-            >
-              feilvanfeilvan@gmail.com
-              <BsArrowUpRight className=" ml-2 my-auto" />
-            </a>
-            <a
-              href="https://www.instagram.com/feilvan/"
-              className=" flex flex-row"
-            >
-              Instagram
-              <BsArrowUpRight className=" ml-2 my-auto" />
-            </a>
-            <a
-              href="https://www.behance.net/feilvan"
-              className=" flex flex-row"
-            >
-              Behance
-              <BsArrowUpRight className=" ml-2 my-auto" />
-            </a>
-          </div>
-        </div>
-        <div className=" basis-1/2 xl:basis-1/3 flex flex-col space-y-8 ">
-          <div className="font-herosBold text-6xl">Misc</div>
-          <div className="flex flex-col space-y-2 children:w-max">
-            <a
-              href="https://www.youtube.com/feilvan/"
-              className=" flex flex-row"
-            >
-              YouTube - Editing Process
-              <BsArrowUpRight className=" ml-2 my-auto" />
-            </a>
-            <a
-              href="https://www.teepublic.com/user/feilvan"
-              className=" flex flex-row"
-            >
-              TeePublic - T-shirt, phone cases, and more
-              <BsArrowUpRight className=" ml-2 my-auto" />
-            </a>
-          </div>
-        </div>
-      </div>
-      <div className=" flex xl:hidden flex-col items-center">
-        <div>© {new Date().getFullYear()} - Fuad Elhasan Irfani</div>
-      </div>
-    </div>
-  );
-}
-
-function Vertical() {
-  return (
-    <div className=" flex flex-col space-y-14 px-6 sm:px-14 my-14 w-full">
-      <div className=" flex flex-col space-y-8 ">
-        <div className="font-herosBold text-[9vw] leading-[7vw] sm:text-6xl">
-          Get{" "}
-          <span className=" text-outline-white font-herosBoldItalic">in</span>{" "}
-          Touch
-        </div>
-        <div className="flex flex-col space-y-3 children:w-max">
-          <a href="mailto:feilvanfeilvan@gmail.com" className=" flex flex-row">
-            feilvanfeilvan@gmail.com
-            <BsArrowUpRight className=" ml-2 my-auto" />
-          </a>
-          <a
-            href="https://www.instagram.com/feilvan/"
-            className=" flex flex-row"
-          >
-            Instagram
-            <BsArrowUpRight className=" ml-2 my-auto" />
-          </a>
-          <a href="https://www.behance.net/feilvan" className=" flex flex-row">
-            Behance
-            <BsArrowUpRight className=" ml-2 my-auto" />
-          </a>
-        </div>
-      </div>
-      <div className=" flex flex-col space-y-8 ">
-        <div className="font-herosBold text-[9vw] leading-[7vw] sm:text-6xl">
-          Misc
-        </div>
-        <div className="flex flex-col space-y-2 children:w-max">
-          <a href="https://www.youtube.com/feilvan/" className=" flex flex-row">
-            YouTube<span className="hidden sm:block"> - Editing Process</span>
-            <BsArrowUpRight className=" ml-2 my-auto" />
-          </a>
-          <a
-            href="https://www.teepublic.com/user/feilvan"
-            className=" flex flex-row"
-          >
-            TeePublic
-            <span className="hidden sm:block">
-              {" "}
-              - T-shirt, phone cases, and more
-            </span>
-            <BsArrowUpRight className=" ml-2 my-auto" />
-          </a>
-        </div>
-      </div>
-      <div className=" flex flex-col items-center">
-        <div>© {new Date().getFullYear()} - Fuad Elhasan Irfani</div>
       </div>
     </div>
   );
