@@ -7,7 +7,9 @@ import w201024 from "../public/images/works/201024.jpg";
 import w201115 from "../public/images/works/201115.jpg";
 import w210622 from "../public/images/works/210622.jpg";
 import Image from "next/image";
-import { BsArrowUpRight } from "react-icons/bs";
+import { useRef } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 
 const list = [
   {
@@ -16,42 +18,60 @@ const list = [
     image: w200509,
   },
   {
-    title: "Twins",
-    date: 200509,
-    image: w200509,
+    title: "Figment",
+    date: 201115,
+    image: w201115,
   },
   {
-    title: "Twins",
-    date: 200509,
-    image: w200509,
+    title: "Levitate",
+    date: 200315,
+    image: w200315,
+  },
+  {
+    title: "Heat",
+    date: 200713,
+    image: w200713,
   },
 ];
 
 export default function Works() {
+  const worksRef = useRef();
+
   return (
-    <div className="px-8 md:px-14 py-32">
-      <div className=" font-herosItalic text-base uppercase tracking-widest text-neutral-400 py-12">
+    <div id="works" ref={worksRef} className="px-8 md:px-14 py-32">
+      <div className=" italic text-base uppercase tracking-widest text-neutral-400 py-12">
         Selected Personal Works
       </div>
-      <div id="works" className=" grid grid-cols-2 gap-10  bg-black">
+      <div id="works" className=" grid grid-cols-2 gap-10">
         {list.map((item) => (
           <div key={item.date} className=" ">
             <div className="">
-              <div className=" relative h-96">
-                <Image
-                  src={item.image}
-                  alt=""
-                  layout="fill"
-                  objectFit="cover"
-                />
+              <div className=" grid content-center h-[75vh] overflow-hidden">
+                <div data-scroll data-scroll-speed="2" className=" block">
+                  <Image src={item.image} alt="" layout="responsive" />
+                </div>
               </div>
-              <div className=" flex flex-row justify-between py-4">
+
+              <div className=" flex flex-row justify-between py-8">
                 <div>{item.title}</div>
-                <div>{item.date}</div>
+                <div className=" text-neutral-400">#{item.date}</div>
               </div>
             </div>
           </div>
         ))}
+      </div>
+      <div className="grid grid-cols-4 w-full mt-12">
+        <a
+          href="https://www.instagram.com/feilvan"
+          className=" grid col-start-4 border h-16 content-center justify-center hover:no-underline hover:bg-white hover:text-black transition-all"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <div className=" space-x-4">
+            <span>More on Instagram</span>
+            <FontAwesomeIcon icon={faUpRightFromSquare} />
+          </div>
+        </a>
       </div>
     </div>
   );

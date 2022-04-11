@@ -10,7 +10,7 @@ export default function LaxButton({ children }: { children: React.ReactNode }) {
         <MouseParallaxChild
           factorX={0.1}
           factorY={0.1}
-          className="border p-4 rounded-full overflow-visible"
+          className="border px-8 py-4 rounded-full overflow-visible"
         >
           <div>{children}</div>
         </MouseParallaxChild>

@@ -1,7 +1,12 @@
-export default function BpIndicator() {
+export default function BpHelper() {
   return (
-    <div className="flex flex-col items-center">
-      <div className=" fixed bottom-4 z-50 border rounded-md py-1 px-6 bg-black/50">
+    <div
+      data-scroll
+      data-scroll-sticky
+      data-scroll-target="main"
+      className="flex flex-row justify-center w-screen absolute bottom-4"
+    >
+      <div className="  z-50 border rounded-md py-1 px-6 bg-black/50">
         <div className=" block sm:hidden">{"<"}SM</div>
         <div className=" hidden sm:block md:hidden">SM</div>
         <div className=" hidden md:block lg:hidden">MD</div>

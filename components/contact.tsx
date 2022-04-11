@@ -10,9 +10,11 @@ export default function Contact() {
           <div className="font-herosItalic text-8xl uppercase">
             Let&apos;s Work Together
           </div>
-          <LaxButton>
-            <div className=" text-5xl">hello@feilvan.art</div>
-          </LaxButton>
+          <div className=" mt-8">
+            <LaxButton>
+              <div className=" text-5xl">hello@feilvan.art</div>
+            </LaxButton>
+          </div>
         </div>
       </div>
     </div>

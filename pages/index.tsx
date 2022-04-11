@@ -4,7 +4,7 @@ import Background from "../components/background";
 import Hero from "../components/hero";
 import Works from "../components/works";
 import Contact from "../components/contact";
-import BpIndicator from "../components/util/breakpointIndicator";
+import About from "../components/about";
 
 export default function Home() {
   return (
@@ -15,6 +15,7 @@ export default function Home() {
         </Head>
         <Background />
         <Hero />
+        <About />
         <Works />
         <Contact />
       </Layout>

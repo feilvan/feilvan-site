@@ -19,7 +19,7 @@ export default function Hero() {
       <MouseParallaxChild
         factorX={0.02}
         factorY={0.06}
-        className=" flex absolute bottom-40 z-20"
+        className=" flex absolute bottom-20 z-20"
       >
         <div>
           <BigText />
@@ -31,7 +31,11 @@ export default function Hero() {
 
 function BigText() {
   return (
-    <div className=" flex flex-row children:big-text">
+    <div
+      data-scroll
+      data-scroll-speed="-2"
+      className=" flex flex-row children:big-text"
+    >
       <div>
         Reality Reimagined<span className=" px-28">—</span>
       </div>
