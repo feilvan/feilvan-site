@@ -42,11 +42,14 @@ export default function Works() {
       <div className=" italic text-base uppercase tracking-widest text-neutral-400 py-12">
         Selected Personal Works
       </div>
-      <div id="works" className=" grid grid-cols-2 gap-10">
+      <div
+        id="works"
+        className=" grid grid-cols-1 lg:grid-cols-2 gap-0 md:gap-10"
+      >
         {list.map((item) => (
           <div key={item.date} className=" ">
             <div className="">
-              <div className=" grid content-center h-[75vh] overflow-hidden">
+              <div className=" grid content-center h-[50vw] lg:h-[30vw] overflow-hidden">
                 <div data-scroll data-scroll-speed="2" className=" block">
                   <Image src={item.image} alt="" layout="responsive" />
                 </div>
@@ -63,7 +66,7 @@ export default function Works() {
       <div className="grid grid-cols-4 w-full mt-12">
         <a
           href="https://www.instagram.com/feilvan"
-          className=" grid col-start-4 border h-16 content-center justify-center hover:no-underline hover:bg-white hover:text-black transition-all"
+          className=" grid col-start-1 col-span-4 lg:col-span-1 lg:col-start-4 border py-4 content-center justify-center hover:no-underline hover:bg-white hover:text-black transition-all"
           target="_blank"
           rel="noreferrer"
         >

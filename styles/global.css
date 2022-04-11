@@ -23,7 +23,7 @@
   }
 
   .big-text {
-    @apply text-[12vw] tracking-tighter w-max font-heros;
+    @apply text-[18vw] sm:text-[12vw] tracking-tighter w-max font-heros;
     animation: run 15s linear infinite;
   }
 
