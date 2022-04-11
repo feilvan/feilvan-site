@@ -1,3 +1,4 @@
+import Background from "./background";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faChevronRight,
@@ -12,6 +13,7 @@ import {
 export default function Hero() {
   return (
     <div>
+      <Background />
       <div className="block sm:hidden">
         <NarrowViewport />
       </div>

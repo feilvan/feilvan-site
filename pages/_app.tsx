@@ -21,7 +21,7 @@ export default function App({ Component, pageProps }: AppProps) {
         el: scrollRef.current,
         smooth: true,
         reloadOnContextChange: true,
-        mobile: {
+        smartphone: {
           breakpoint: 0,
           smooth: false,
         },

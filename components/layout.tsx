@@ -22,7 +22,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <main id="main">
         <Navbar />
         <div className="overflow-hidden">{children}</div>
-        <BpHelper />
+        {/* <BpHelper /> */}
       </main>
     </div>
   );
