@@ -20,7 +20,7 @@ export default function Navbar() {
           <div className="italic font-bold hidden sm:block tracking-normal hover:tracking-widest transition-all no-underline">
             FEILVAN
           </div>
-          <BpHelperHero />
+          {/* <BpHelperHero /> */}
         </a>
       </Link>
       <div className=" flex flex-row space-x-8">
