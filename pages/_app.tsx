@@ -12,31 +12,17 @@ export default function App({ Component, pageProps }: AppProps) {
   const scrollRef = useRef();
 
   useEffect(() => {
-    if (typeof window === "undefined") {
-      return;
-    }
-
-    const scroll = import("locomotive-scroll").then((LocomotiveScroll) => {
-      new LocomotiveScroll.default({
+    const scroll = import("locomotive-scroll").then((LocoScroll) => {
+      new LocoScroll.default({
         el: scrollRef.current,
         smooth: true,
         reloadOnContextChange: true,
-        touchMultiplier: 2,
-        smartphone: {
-          breakpoint: 0,
-          smooth: false,
-        },
-        tablet: {
-          breakpoint: 0,
-          smooth: false,
-        },
       });
     });
-
-    // return () => scroll.destroy();
   }, []);
+
   return (
-    <div data-scroll-container ref={scrollRef}>
+    <div ref={scrollRef}>
       <ThemeProvider attribute="class">
         <Component {...pageProps} />
       </ThemeProvider>

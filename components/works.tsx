@@ -38,8 +38,8 @@ export default function Works() {
   const worksRef = useRef();
 
   return (
-    <div id="works" ref={worksRef} className="px-8 md:px-14 py-32">
-      <div className=" italic text-base uppercase tracking-widest text-neutral-400 py-12">
+    <div id="works" ref={worksRef} className="px-8 md:px-14 py-16 bg-black">
+      <div className=" italic text-xs sm:text-base uppercase tracking-widest text-neutral-400 py-12">
         Selected Personal Works
       </div>
       <div

@@ -1,6 +1,5 @@
 import Head from "next/head";
 import Navbar from "./navbar";
-import BpHelper from "./util/BpHelper";
 
 export const siteTitle = "FEILVAN";
 
@@ -22,7 +21,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <main id="main">
         <Navbar />
         <div className="overflow-hidden">{children}</div>
-        {/* <BpHelper /> */}
       </main>
     </div>
   );

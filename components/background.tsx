@@ -6,7 +6,7 @@ export default function Background() {
     <div className="fixed top-0 left-0 h-screen w-screen -z-50">
       <Image
         data-scroll
-        data-scroll-speed="-4"
+        data-scroll-speed="-3"
         src={banner}
         placeholder="blur"
         layout="fill"

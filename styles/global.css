@@ -5,7 +5,7 @@
 @layer components {
   body,
   .body {
-    @apply bg-white dark:bg-black overflow-hidden font-heros text-lg sm:text-xl text-black dark:text-white children:transition-all transition-all;
+    @apply bg-white dark:bg-black font-heros text-lg sm:text-xl text-black dark:text-white children:transition-all transition-all;
   }
 
   a {
@@ -34,20 +34,5 @@
     100% {
       transform: translatex(-100%);
     }
-  }
-}
-
-@layer utilities {
-  .snap {
-    scroll-snap-type: var(--scroll-snap-direction) var(--scroll-snap-constraint);
-  }
-  .snap-y {
-    --scroll-snap-direction: y;
-  }
-  .snap-mandatory {
-    --scroll-snap-constraint: mandatory;
-  }
-  .snap-start {
-    scroll-snap-align: start;
   }
 }

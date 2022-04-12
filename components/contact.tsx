@@ -4,10 +4,10 @@ import LaxButton from "./util/LaxButton";
 
 export default function Contact() {
   return (
-    <div id="contact" className="flex h-screen px-8 md:px-14">
+    <div id="contact" className="flex h-screen px-8 md:px-14 bg-black">
       <div className="flex flex-row items-center ">
         <div className=" flex flex-col">
-          <div className="font-herosItalic text-8xl uppercase">
+          <div className="font-herosItalic text-5xl sm:text-7xl md:text-8xl uppercase">
             Let&apos;s Work Together
           </div>
           <div className="flex flex-col mt-8 space-y-8">

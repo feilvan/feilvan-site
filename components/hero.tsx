@@ -27,12 +27,8 @@ export default function Hero() {
 function NarrowViewport() {
   return (
     <div className=" flex relative h-screen w-screen overflow-hidden">
-      <div className=" absolute h-full w-full flex flex-row justify-between items-end px-8 md:px-14 -bottom-16">
-        <div
-          data-scroll
-          data-scroll-speed="-3"
-          className=" flex flex-row justify-between w-full"
-        >
+      <div className=" absolute h-full w-full flex flex-row justify-between items-end px-8 md:px-14 bottom-20">
+        <div className=" flex flex-row justify-between w-full">
           <div>
             Freelance
             <br />
@@ -45,12 +41,8 @@ function NarrowViewport() {
           </div>
         </div>
       </div>
-      <div className=" flex absolute bottom-40 z-20">
-        <div
-          data-scroll
-          data-scroll-speed="-2"
-          className=" flex flex-row children:big-text"
-        >
+      <div className=" flex absolute bottom-56 z-20">
+        <div className=" flex flex-row children:big-text">
           <div>
             Reality Reimagined<span className=" px-12">—</span>
           </div>
@@ -69,13 +61,13 @@ function WideViewport() {
       <MouseParallaxChild
         factorX={0.03}
         factorY={0.1}
-        className=" absolute h-full w-full flex flex-row justify-between items-center px-14"
+        className=" absolute h-full w-full flex flex-row justify-between items-center px-14 xl:text-2xl"
       >
-        <div className=" flex flex-col space-y-6">
+        <div className=" flex flex-col space-y-6 ">
           <div>
             <FontAwesomeIcon icon={faChevronRight} size="lg" />
           </div>
-          <div className=" text-3xl">
+          <div>
             Freelance
             <br />
             Digital Imaging
@@ -87,7 +79,7 @@ function WideViewport() {
           <div>
             <FontAwesomeIcon icon={faEarthAsia} size="lg" />
           </div>
-          <div className=" text-3xl text-right">
+          <div className=" text-right">
             Based in
             <br />
             Indonesia
@@ -97,13 +89,9 @@ function WideViewport() {
       <MouseParallaxChild
         factorX={0.02}
         factorY={0.06}
-        className=" flex absolute bottom-20 z-20"
+        className=" flex absolute bottom-40 z-20"
       >
-        <div
-          data-scroll
-          data-scroll-speed="-2"
-          className=" flex flex-row children:big-text"
-        >
+        <div className=" flex flex-row children:big-text">
           <div>
             Reality Reimagined<span className=" px-28">—</span>
           </div>
