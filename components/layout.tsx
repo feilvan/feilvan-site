@@ -1,9 +1,22 @@
 import Head from "next/head";
 import Navbar from "./navbar";
+import { motion } from "framer-motion";
+import { useEffect } from "react";
+import SimplyLoader from "./util/simplyLoader";
 
 export const siteTitle = "FEILVAN";
 
-export default function Layout({ children }: { children: React.ReactNode }) {
+export default function Layout({
+  children,
+  home,
+}: {
+  children: React.ReactNode;
+  home?: boolean;
+}) {
+  useEffect(() => {
+    <SimplyLoader />;
+  }, []);
+
   return (
     <div>
       <Head>
@@ -20,7 +33,14 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       </Head>
       <main id="main">
         <Navbar />
-        <div className="overflow-hidden">{children}</div>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          className="overflow-hidden"
+        >
+          {children}
+        </motion.div>
       </main>
     </div>
   );

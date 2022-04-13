@@ -1,31 +1,43 @@
+import SimplyLoader from "../components/util/simplyLoader";
+import { useEffect, useState } from "react";
 import "../styles/global.css";
 import { AppProps } from "next/app";
-import { ThemeProvider } from "next-themes";
 import "../public/fonts/texGyreHeros/texgyreheros_bold_macroman/stylesheet.css";
 import "../public/fonts/texGyreHeros/texgyreheros_bolditalic_macroman/stylesheet.css";
 import "../public/fonts/texGyreHeros/texgyreheros_italic_macroman/stylesheet.css";
 import "../public/fonts/texGyreHeros/texgyreheros_regular_macroman/stylesheet.css";
-import "../styles/locomotive-scroll.css";
-import { useRef, useEffect } from "react";
+import { AnimatePresence } from "framer-motion";
+import { ParallaxProvider } from "react-scroll-parallax";
+import LaxController from "../components/util/LaxController";
 
-export default function App({ Component, pageProps }: AppProps) {
-  const scrollRef = useRef();
+export default function App({ Component, pageProps, router }: AppProps) {
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    const scroll = import("locomotive-scroll").then((LocoScroll) => {
-      new LocoScroll.default({
-        el: scrollRef.current,
-        smooth: true,
-        reloadOnContextChange: true,
-      });
-    });
+    const ele = document.getElementById("ipl-progress-indicator");
+    if (ele) {
+      // fade out
+      ele.classList.add("available");
+      setTimeout(() => {
+        // remove from DOM
+        ele.outerHTML = "";
+      }, 2000);
+    }
+    setLoading(true);
   }, []);
 
   return (
-    <div ref={scrollRef}>
-      <ThemeProvider attribute="class">
-        <Component {...pageProps} />
-      </ThemeProvider>
-    </div>
+    <>
+      {loading ? (
+        <ParallaxProvider>
+          {/* <LaxController /> */}
+          <AnimatePresence exitBeforeEnter>
+            <Component {...pageProps} key={router.route} />
+          </AnimatePresence>
+        </ParallaxProvider>
+      ) : (
+        <>{/* <SimplyLoader /> */}</>
+      )}
+    </>
   );
 }

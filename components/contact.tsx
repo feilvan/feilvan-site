@@ -13,7 +13,7 @@ export default function Contact() {
           <div className="flex flex-col mt-8 space-y-8">
             <a
               href="mailto:hello@feilvan.art"
-              className="px-12 py-4 grid border w-max content-center justify-center hover:no-underline hover:bg-white hover:text-black transition-all"
+              className="px-12 py-4 grid border w-full sm:w-max content-center justify-center hover:no-underline hover:bg-white hover:text-black transition-all"
             >
               <div className=" text-2xl">hello@feilvan.art</div>
             </a>

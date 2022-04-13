@@ -1,4 +1,3 @@
-import Background from "./background";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faChevronRight,
@@ -13,7 +12,6 @@ import {
 export default function Hero() {
   return (
     <div>
-      <Background />
       <div className="block sm:hidden">
         <NarrowViewport />
       </div>
@@ -26,7 +24,7 @@ export default function Hero() {
 
 function NarrowViewport() {
   return (
-    <div className=" flex relative h-screen w-screen overflow-hidden">
+    <div className=" flex relative h-screen w-screen overflow-hidden bg-gradient-to-t from-black via-transparent to-transparent">
       <div className=" absolute h-full w-full flex flex-row justify-between items-end px-8 md:px-14 bottom-20">
         <div className=" flex flex-row justify-between w-full">
           <div>
@@ -57,7 +55,7 @@ function NarrowViewport() {
 
 function WideViewport() {
   return (
-    <MouseParallaxContainer className=" flex relative h-screen w-screen">
+    <MouseParallaxContainer className=" flex relative h-screen w-screen bg-gradient-to-t from-black via-transparent to-transparent">
       <MouseParallaxChild
         factorX={0.03}
         factorY={0.1}

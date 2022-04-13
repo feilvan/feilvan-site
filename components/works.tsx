@@ -10,6 +10,7 @@ import Image from "next/image";
 import { useRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
+import { Parallax } from "react-scroll-parallax";
 
 const list = [
   {
@@ -50,9 +51,16 @@ export default function Works() {
           <div key={item.date} className=" ">
             <div className="">
               <div className=" grid content-center h-[50vw] lg:h-[30vw] overflow-hidden">
-                <div data-scroll data-scroll-speed="2" className=" block">
-                  <Image src={item.image} alt="" layout="responsive" />
-                </div>
+                <Parallax translateY={[20, -20]}>
+                  <div className=" block">
+                    <Image
+                      src={item.image}
+                      alt=""
+                      layout="responsive"
+                      placeholder="blur"
+                    />
+                  </div>
+                </Parallax>
               </div>
 
               <div className=" flex flex-row justify-between py-8">
