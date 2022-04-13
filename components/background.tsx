@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 export default function Background() {
   return (
-    <div className="fixed grid content-center top-0 -z-50 overflow-hidden">
+    <div className="absolute grid content-center top-0 -z-50 overflow-hidden">
       <motion.div
         initial={{ scale: 1.5, opacity: 0 }}
         animate={{
@@ -14,7 +14,10 @@ export default function Background() {
           transition: { duration: 1.6, ease: [0.6, 0.01, -0.05, 0.95] },
         }}
       >
-        <Parallax speed={50} className="relative top-0 h-screen w-screen">
+        <Parallax
+          speed={-50}
+          className="relative top-0 h-screen w-screen overflow-hidden"
+        >
           <Image
             src={banner}
             placeholder="blur"

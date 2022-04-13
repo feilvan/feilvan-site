@@ -5,7 +5,7 @@
 @layer components {
   body,
   .body {
-    @apply bg-black font-heros text-lg sm:text-xl text-white children:transition-all transition-all scroll-smooth;
+    @apply bg-black font-heros text-lg sm:text-xl text-white overflow-x-hidden children:transition-all transition-all scroll-smooth;
   }
 
   a {
