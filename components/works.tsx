@@ -83,7 +83,7 @@ export default function Works() {
   }, [inView, parentAnim, childAnim]);
 
   return (
-    <div id="works" className="px-8 md:px-14 py-16 bg-black">
+    <div id="works" className="px-4 sm:px-8 md:px-14 py-16 bg-black">
       <div className=" italic text-xs sm:text-base uppercase tracking-widest text-neutral-400 py-12">
         Selected Personal Works
       </div>
