@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Layout, { siteTitle } from "../components/layout";
-import Background from "../components/background";
 import Hero from "../components/hero";
+import Banner from "../components/banner";
 import Works from "../components/works";
 import Contact from "../components/contact";
 import About from "../components/about";
@@ -14,8 +14,8 @@ export default function Home() {
         <Head>
           <title>{siteTitle}</title>
         </Head>
-        <Background />
-        <Hero />
+        {/* <Hero /> */}
+        <Banner />
         {/* <About /> */}
         <Works />
         <Contact />

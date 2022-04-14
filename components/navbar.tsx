@@ -1,6 +1,10 @@
 import Link from "next/link";
-import { FaArrowDown, FaArrowUp, FaUndo } from "react-icons/fa";
-import React, { useEffect, useRef, useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faArrowUp,
+  faArrowDown,
+  faUndo,
+} from "@fortawesome/free-solid-svg-icons";
 import { motion } from "framer-motion";
 
 export default function Navbar() {
@@ -9,25 +13,28 @@ export default function Navbar() {
       initial={{ y: "-100%" }}
       animate={{ y: 0, transition: { duration: 0.8, delay: 0.4 } }}
       exit={{ opacity: 0 }}
-      className=" fixed top-0 flex flex-row justify-between w-full py-8 md:py-12 px-8 md:px-14 z-50 mix-blend-difference"
+      className=" fixed top-0 grid grid-cols-1 lg:grid-cols-2 gap-10 w-full py-8 md:py-12 px-8 md:px-14 z-50 mix-blend-difference text-base lg:text-lg xl:text-xl"
     >
       <Link href="/" passHref>
-        <a className=" flex flex-row space-x-8">
-          <div className=" flex flex-row my-auto space-x-1">
-            <FaArrowUp />
-            <FaArrowDown />
-            <FaUndo />
-          </div>
-          <div className="italic font-bold hidden sm:block tracking-normal hover:tracking-widest transition-all no-underline">
+        <a className=" hidden lg:flex flex-row space-x-8 w-max">
+          <div className="hidden sm:block tracking-widest transition-all no-underline">
             FEILVAN
           </div>
-          {/* <BpHelperHero /> */}
+          <BpHelperHero />
         </a>
       </Link>
-      <div className=" flex flex-row space-x-8">
-        {/* <Link href="/works" scroll={false}>
-          <a>Works</a>
-        </Link> */}
+      <div className=" flex flex-row justify-between">
+        <div className="hidden sm:block lg:hidden tracking-widest">FEILVAN</div>
+        <div>
+          Available for{" "}
+          <span className=" font-bold px-4"> Digital Imaging </span> Freelance
+          Work
+        </div>
+        <div className=" hidden xl:flex flex-row my-auto space-x-1">
+          <FontAwesomeIcon icon={faArrowUp} />
+          <FontAwesomeIcon icon={faArrowDown} />
+          <FontAwesomeIcon icon={faUndo} />
+        </div>
       </div>
     </motion.div>
   );
