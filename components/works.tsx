@@ -7,10 +7,15 @@ import w201024 from "../public/images/works/201024.jpg";
 import w201115 from "../public/images/works/201115.jpg";
 import w210622 from "../public/images/works/210622.jpg";
 import Image from "next/image";
-import { useRef } from "react";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
+
 import { Parallax } from "react-scroll-parallax";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { useAnimation } from "framer-motion";
+import { useEffect } from "react";
 
 const list = [
   {
@@ -35,31 +40,71 @@ const list = [
   },
 ];
 
+const parent = {
+  visible: {
+    transition: {
+      staggerChildren: 0.4,
+    },
+  },
+};
+
+const children = {
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      ease: [0.6, 0.01, -0.05, 0.95],
+      duration: 0.8,
+    },
+  },
+  hidden: {
+    y: "20%",
+    opacity: 0,
+    transition: {
+      duration: 0,
+    },
+  },
+};
+
 export default function Works() {
-  const worksRef = useRef();
+  const { ref, inView } = useInView();
+  const parentAnim = useAnimation();
+  const childAnim = useAnimation();
+
+  useEffect(() => {
+    if (inView) {
+      parentAnim.start("visible");
+      childAnim.start("visible");
+    }
+    if (!inView) {
+      parentAnim.start("hidden");
+      childAnim.start("hidden");
+    }
+  }, [inView, parentAnim, childAnim]);
 
   return (
-    <div id="works" ref={worksRef} className="px-8 md:px-14 py-16 bg-black">
+    <div id="works" className="px-8 md:px-14 py-16 bg-black">
       <div className=" italic text-xs sm:text-base uppercase tracking-widest text-neutral-400 py-12">
         Selected Personal Works
       </div>
-      <div
-        id="works"
-        className=" grid grid-cols-1 lg:grid-cols-2 gap-0 md:gap-10"
-      >
-        {list.map((item) => (
-          <div key={item.date} className=" ">
-            <div className="">
+      <motion.div ref={ref} id="works" variants={parent} animate={parentAnim}>
+        <motion.div className=" grid grid-cols-1 lg:grid-cols-2 gap-0 md:gap-10">
+          {list.map((item) => (
+            <motion.div key={item.date}>
               <div className=" grid content-center h-[50vw] lg:h-[30vw] overflow-hidden">
                 <Parallax translateY={[20, -20]}>
-                  <div className=" block">
+                  <motion.div
+                    variants={children}
+                    animate={childAnim}
+                    className=" block"
+                  >
                     <Image
                       src={item.image}
                       alt=""
                       layout="responsive"
                       placeholder="blur"
                     />
-                  </div>
+                  </motion.div>
                 </Parallax>
               </div>
 
@@ -67,10 +112,10 @@ export default function Works() {
                 <div>{item.title}</div>
                 <div className=" text-neutral-400">#{item.date}</div>
               </div>
-            </div>
-          </div>
-        ))}
-      </div>
+            </motion.div>
+          ))}
+        </motion.div>
+      </motion.div>
       <div className="grid grid-cols-4 w-full mt-12">
         <a
           href="https://www.instagram.com/feilvan"

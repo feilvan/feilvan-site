@@ -7,7 +7,7 @@ export default function Navbar() {
   return (
     <motion.div
       initial={{ y: "-100%" }}
-      animate={{ y: 0, transition: { duration: 0.8 } }}
+      animate={{ y: 0, transition: { duration: 0.8, delay: 0.4 } }}
       exit={{ opacity: 0 }}
       className=" fixed top-0 flex flex-row justify-between w-full py-8 md:py-12 px-8 md:px-14 z-50 mix-blend-difference"
     >

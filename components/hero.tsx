@@ -8,6 +8,7 @@ import {
   MouseParallaxContainer,
   MouseParallaxChild,
 } from "react-parallax-mouse";
+import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
@@ -89,14 +90,19 @@ function WideViewport() {
         factorY={0.06}
         className=" flex absolute bottom-40 z-20"
       >
-        <div className=" flex flex-row children:big-text">
+        <motion.div
+          initial={{ y: 310 }}
+          animate={{ y: 0 }}
+          transition={{ ease: [0.6, 0.01, -0.05, 0.9], duration: 1 }}
+          className=" flex flex-row children:big-text"
+        >
           <div>
-            Reality Reimagined<span className=" px-28">—</span>
+            Reality Reimagined <span className=" px-28">—</span>
           </div>
           <div className="relative">
-            Reality Reimagined<span className=" px-28">—</span>
+            Reality Reimagined <span className=" px-28">—</span>
           </div>
-        </div>
+        </motion.div>
       </MouseParallaxChild>
     </MouseParallaxContainer>
   );

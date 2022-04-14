@@ -15,7 +15,7 @@ module.exports = {
         },
       },
       fontFamily: {
-        heros: ["TeX Gyre Heros", "sans-serif"],
+        space_grotesk: ["Space Grotesk", "sans-serif"],
       },
     },
   },

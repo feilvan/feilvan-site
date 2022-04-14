@@ -5,7 +5,7 @@
 @layer components {
   body,
   .body {
-    @apply bg-black font-heros text-lg sm:text-xl text-white overflow-x-hidden children:transition-all transition-all scroll-smooth;
+    @apply bg-black font-space_grotesk text-lg sm:text-xl text-white overflow-x-hidden children:transition-all transition-all scroll-smooth;
   }
 
   a {
@@ -23,7 +23,7 @@
   }
 
   .big-text {
-    @apply text-[18vw] sm:text-[12vw] tracking-tighter w-max font-heros;
+    @apply text-[18vw] sm:text-[12vw] tracking-tighter w-max font-[700];
     animation: run 15s linear infinite;
   }
 
