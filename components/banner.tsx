@@ -6,7 +6,7 @@ import icon from "../public/images/truclr.svg";
 
 export default function Banner() {
   return (
-    <div className=" grid grid-cols-4 grid-rows-5 h-[125vh] w-screen px-0 sm:px-8 md:px-14">
+    <div className=" grid grid-cols-4 grid-rows-5 h-screen sm:h-[125vh] w-screen px-0 sm:px-8 md:px-14">
       <div className=" relative flex flex-col row-start-2 row-span-1 col-span-full lg:col-span-3 px-4 sm:px-0">
         <span className=" absolute bottom-14 lg:bottom-16 xl:bottom-20 text-[10vw] md:text-[8vw] 2xl:text-[8.3vw] leading-none tracking-tighter">
           Reality Reimagined
