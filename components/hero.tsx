@@ -93,7 +93,7 @@ function WideViewport() {
         <motion.div
           initial={{ y: 310 }}
           animate={{ y: 0 }}
-          transition={{ ease: [0.6, 0.01, -0.05, 0.9], duration: 1 }}
+          transition={{ ease: [0.6, 0.01, -0.05, 0.9], duration: 0.8 }}
           className=" flex flex-row children:big-text"
         >
           <div>

@@ -110,7 +110,7 @@ export default function Works() {
 
               <div className=" flex flex-row justify-between py-8">
                 <div>{item.title}</div>
-                <div className=" text-neutral-400">#{item.date}</div>
+                <div className=" text-neutral-400 font-[300]">#{item.date}</div>
               </div>
             </motion.div>
           ))}

@@ -25,10 +25,9 @@ export default function Navbar() {
         </a>
       </Link>
       <div className=" flex flex-row space-x-8">
-        <Link href="/works" scroll={false}>
+        {/* <Link href="/works" scroll={false}>
           <a>Works</a>
-        </Link>
-        {/* <a>Contact</a> */}
+        </Link> */}
       </div>
     </motion.div>
   );
