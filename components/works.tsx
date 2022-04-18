@@ -84,13 +84,16 @@ export default function Works() {
 
   return (
     <div id="works" className="px-4 sm:px-8 md:px-14 py-16 bg-black">
-      <div className=" italic text-xs sm:text-base uppercase tracking-widest text-neutral-400 py-12">
-        Selected Personal Works
+      <div className=" py-12">
+        <div className=" mb-2 text-xs sm:text-base uppercase tracking-widest font-[300] text-neutral-400 ">
+          Works
+        </div>
+        <div className=" text-6xl">Selected Personal Works</div>
       </div>
       <motion.div ref={ref} id="works" variants={parent} animate={parentAnim}>
         <motion.div className=" grid grid-cols-1 lg:grid-cols-2 gap-0 md:gap-10">
           {list.map((item) => (
-            <motion.div key={item.date}>
+            <div key={item.date}>
               <div className=" grid content-center h-[50vw] lg:h-[30vw] overflow-hidden">
                 <Parallax translateY={[20, -20]}>
                   <motion.div
@@ -112,14 +115,14 @@ export default function Works() {
                 <div>{item.title}</div>
                 <div className=" text-neutral-400 font-[300]">#{item.date}</div>
               </div>
-            </motion.div>
+            </div>
           ))}
         </motion.div>
       </motion.div>
       <div className="grid grid-cols-4 w-full mt-12">
         <a
           href="https://www.instagram.com/feilvan"
-          className=" grid col-start-1 col-span-4 lg:col-span-1 lg:col-start-4 border py-4 content-center justify-center hover:no-underline hover:bg-white hover:text-black transition-all"
+          className=" grid col-start-1 col-span-4 lg:col-span-1 lg:col-start-4 border py-4 content-center justify-center transition-all"
           target="_blank"
           rel="noreferrer"
         >

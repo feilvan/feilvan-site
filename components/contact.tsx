@@ -25,50 +25,53 @@ export default function Contact() {
   };
 
   return (
-    <div className="flex flex-row px-8 md:px-14 h-screen items-center bg-black">
-      <div className=" flex flex-col">
+    <div className="grid grid-cols-1 lg:grid-cols-2 relative px-8 md:px-14 h-screen items-center bg-black">
+      <div className=" flex flex-col col-start-1 lg:col-start-2 space-y-8">
         <div className=" overflow-hidden">
-          <motion.div
-            ref={ref}
-            variants={rowOne}
-            animate={animation}
-            className="text-5xl sm:text-7xl md:text-8xl uppercase font-[700]"
-          >
-            Let&apos;s Work Together
+          <motion.div ref={ref} variants={rowOne} animate={animation}>
+            <div className=" mb-2 text-xs sm:text-base uppercase tracking-widest font-[300] text-neutral-400 ">
+              Get in Touch
+            </div>
+            <div className="text-5xl sm:text-7xl md:text-8xl pb-1">
+              Let&apos;s Work Together
+            </div>
           </motion.div>
         </div>
-        <div className="flex flex-col mt-8 space-y-8">
-          <a
-            href="mailto:hello@feilvan.art"
-            className="px-12 py-4 grid border w-full sm:w-max content-center justify-center hover:no-underline hover:bg-white hover:text-black transition-all"
-          >
-            <div className=" text-2xl uppercase font-[300]">
-              hello@feilvan.art
-            </div>
-          </a>
-          <div className=" flex flex-row children:border children:border-transparent children:px-8 children:py-4">
-            <a
-              href="https://www.instagram.com/feilvan"
-              target="_blank"
-              rel="noreferrer"
-            >
-              IG
-            </a>
-            <a
-              href="https://twitter.com/feilvan"
-              target="_blank"
-              rel="noreferrer"
-            >
-              TW
-            </a>
-            <a
-              href="https://www.linkedin.com/in/fuad-elhasan-irfani/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              IN
-            </a>
+        <a
+          href="mailto:hello@feilvan.art"
+          className="px-12 py-4 grid border w-full sm:w-max content-center justify-center transition-all"
+        >
+          <div className=" text-2xl uppercase font-[300]">
+            hello@feilvan.art
           </div>
+        </a>
+      </div>
+      <div className="px-8 md:px-14 absolute left-0 bottom-4 grid grid-cols-1 sm:grid-cols-2 grid-rows-2 sm:grid-rows-1 w-full">
+        <div>© {new Date().getFullYear()} - Fuad Elhasan Irfani</div>
+        <div className="space-x-4 flex flex-row children:w-max children:transition-all">
+          <a
+            href="https://www.instagram.com/feilvan"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Instagram
+          </a>
+          ,
+          <a
+            href="https://www.youtube.com/feilvan"
+            target="_blank"
+            rel="noreferrer"
+          >
+            YouTube
+          </a>
+          ,
+          <a
+            href="https://www.linkedin.com/in/fuad-elhasan-irfani/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            LinkedIn
+          </a>
         </div>
       </div>
     </div>

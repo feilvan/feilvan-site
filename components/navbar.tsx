@@ -13,19 +13,19 @@ export default function Navbar() {
       initial={{ y: "-100%" }}
       animate={{ y: 0, transition: { duration: 0.8, delay: 0.4 } }}
       exit={{ opacity: 0 }}
-      className=" fixed top-0 grid grid-cols-1 lg:grid-cols-2 gap-10 w-full py-8 md:py-12 px-4 sm:px-8 md:px-14 z-50 mix-blend-difference text-base lg:text-lg xl:text-xl"
+      className=" fixed top-0 grid grid-cols-1 lg:grid-cols-2 w-full pt-4 px-4 sm:px-8 md:px-14 z-50 mix-blend-difference text-base lg:text-lg xl:text-xl"
     >
       <Link href="/" passHref>
         <a className=" hidden lg:flex flex-row space-x-8 w-max">
           <div className="hidden sm:block tracking-widest transition-all no-underline">
             FEILVAN
           </div>
-          <BpHelperHero />
         </a>
       </Link>
       <div className=" flex flex-row justify-between">
         <div className="hidden sm:block lg:hidden tracking-widest">FEILVAN</div>
         <div>Available for Freelance Work</div>
+        {/* <BpHelperHero /> */}
         <div className=" hidden xl:flex flex-row my-auto space-x-1">
           <FontAwesomeIcon icon={faArrowUp} />
           <FontAwesomeIcon icon={faArrowDown} />
