@@ -47,7 +47,7 @@ export default function Contact() {
         </a>
       </div>
       <div className="px-8 md:px-14 absolute left-0 bottom-4 grid grid-cols-1 sm:grid-cols-2 grid-rows-2 sm:grid-rows-1 w-full">
-        <div>© {new Date().getFullYear()} - Fuad Elhasan Irfani</div>
+        <div>© {new Date().getFullYear()}</div>
         <div className="space-x-4 flex flex-row children:w-max children:transition-all">
           <a
             href="https://www.instagram.com/feilvan"

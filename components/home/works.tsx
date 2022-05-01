@@ -1,12 +1,5 @@
-import w200315 from "../public/images/works/200315.jpg";
-import w200424 from "../public/images/works/200424.jpg";
-import w200509 from "../public/images/works/200509.jpg";
-import w200713 from "../public/images/works/200713.jpg";
-import w200919 from "../public/images/works/200919.jpg";
-import w201024 from "../public/images/works/201024.jpg";
-import w201115 from "../public/images/works/201115.jpg";
-import w210622 from "../public/images/works/210622.jpg";
 import Image from "next/image";
+import Link from "next/link";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
@@ -17,26 +10,31 @@ import { useInView } from "react-intersection-observer";
 import { useAnimation } from "framer-motion";
 import { useEffect } from "react";
 
+import i200509 from "../../public/images/works/200509.jpg";
+import i201115 from "../../public/images/works/201115.jpg";
+import i200315 from "../../public/images/works/200315.jpg";
+import i200713 from "../../public/images/works/200713.jpg";
+
 const list = [
   {
     title: "Twins",
     date: 200509,
-    image: w200509,
+    image: i200509,
   },
   {
     title: "Figment",
     date: 201115,
-    image: w201115,
+    image: i201115,
   },
   {
     title: "Levitate",
     date: 200315,
-    image: w200315,
+    image: i200315,
   },
   {
     title: "Heat",
     date: 200713,
-    image: w200713,
+    image: i200713,
   },
 ];
 
@@ -83,39 +81,48 @@ export default function Works() {
   }, [inView, parentAnim, childAnim]);
 
   return (
-    <div id="works" className="px-4 sm:px-8 md:px-14 py-16 bg-black">
+    <div id="works" className="px-4 sm:px-8 md:px-14 pt-12 sm:pt-40">
       <div className=" py-12">
-        <div className=" mb-2 text-xs sm:text-base uppercase tracking-widest font-[300] text-neutral-400 ">
+        <div className=" mb-2 text-xs sm:text-base uppercase tracking-widest font-[300] text-neutral-500 ">
           Works
         </div>
-        <div className=" text-6xl">Selected Personal Works</div>
+        <div className=" text-2xl sm:text-6xl">Selected Personal Works</div>
       </div>
       <motion.div ref={ref} id="works" variants={parent} animate={parentAnim}>
         <motion.div className=" grid grid-cols-1 lg:grid-cols-2 gap-0 md:gap-10">
           {list.map((item) => (
-            <div key={item.date}>
-              <div className=" grid content-center h-[50vw] lg:h-[30vw] overflow-hidden">
-                <Parallax translateY={[20, -20]}>
-                  <motion.div
-                    variants={children}
-                    animate={childAnim}
-                    className=" block"
-                  >
-                    <Image
-                      src={item.image}
-                      alt=""
-                      layout="responsive"
-                      placeholder="blur"
-                    />
-                  </motion.div>
-                </Parallax>
-              </div>
+            <Link
+              href={"/works/".concat(item.date.toString())}
+              passHref
+              key={item.date}
+              scroll={true}
+            >
+              <button className=" h-max hover:scale-[1.02] transition-all">
+                <div className=" grid content-center h-48 sm:h-[30rem] overflow-hidden">
+                  <Parallax speed={20}>
+                    <motion.div
+                      variants={children}
+                      animate={childAnim}
+                      className="block"
+                    >
+                      <Image
+                        src={item.image}
+                        alt=""
+                        layout="responsive"
+                        placeholder="blur"
+                      />
+                    </motion.div>
+                  </Parallax>
+                </div>
 
-              <div className=" flex flex-row justify-between py-8">
-                <div>{item.title}</div>
-                <div className=" text-neutral-400 font-[300]">#{item.date}</div>
-              </div>
-            </div>
+                <div className=" flex flex-row justify-between py-8">
+                  <div>{item.title}</div>
+                  <div className=" text-neutral-500 font-[300]">
+                    #{item.date}
+                  </div>
+                </div>
+              </button>
+            </Link>
           ))}
         </motion.div>
       </motion.div>

@@ -5,7 +5,7 @@
 @layer components {
   body,
   .body {
-    @apply bg-black font-space_grotesk text-lg sm:text-xl text-white overflow-x-hidden children:transition-all transition-all scroll-smooth;
+    @apply max-w-[120rem] mx-auto bg-black font-space_grotesk text-lg sm:text-xl text-white overflow-x-hidden children:transition-all transition-all scroll-smooth;
   }
 
   a {
@@ -55,7 +55,8 @@
     }
   }
 
-  .set2 {
-    font-feature-settings: "ss03" 1;
+  li::before {
+    @apply mr-4;
+    content: "▪";
   }
 }

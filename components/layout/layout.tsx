@@ -1,18 +1,13 @@
 import Head from "next/head";
 import Navbar from "./navbar";
+import Contact from "./contact";
 import { motion } from "framer-motion";
 import { useEffect } from "react";
-import SimplyLoader from "./util/simplyLoader";
+import SimplyLoader from "../util/simplyLoader";
 
 export const siteTitle = "FEILVAN";
 
-export default function Layout({
-  children,
-  home,
-}: {
-  children: React.ReactNode;
-  home?: boolean;
-}) {
+export default function Layout({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     <SimplyLoader />;
   }, []);
@@ -36,10 +31,10 @@ export default function Layout({
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
           className="overflow-hidden"
         >
           {children}
+          <Contact />
         </motion.div>
       </main>
     </div>

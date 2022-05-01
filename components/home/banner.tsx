@@ -1,8 +1,10 @@
 import Image from "next/image";
-import banner from "../public/images/banner2.jpg";
+import banner from "../../public/images/banner2.jpg";
 import { Parallax } from "react-scroll-parallax";
 import { motion } from "framer-motion";
-import icon from "../public/images/truclr.svg";
+import icon from "../../public/images/truclr.svg";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCode, faPaintbrush } from "@fortawesome/free-solid-svg-icons";
 
 const variants = {
   fromBottom: { y: "100%" },
@@ -51,13 +53,15 @@ export default function Banner() {
             Based in Indonesia
           </motion.div>
         </div>
-        <div className=" absolute bottom-8 xl:bottom-12 2xl:bottom-16 right-0 w-[10rem] overflow-hidden">
+        <div className=" absolute right-0 bottom-24 overflow-hidden ">
           <motion.div
             variants={variants}
             initial="fromBottom"
             animate="finishDelay"
+            className=" space-x-4"
           >
-            <Image src={icon} alt="" />
+            <FontAwesomeIcon icon={faPaintbrush} size="4x" />
+            <FontAwesomeIcon icon={faCode} size="4x" />
           </motion.div>
         </div>
       </div>
@@ -67,7 +71,7 @@ export default function Banner() {
             variants={variants}
             initial="fromBottom"
             animate="finish"
-            className="relative h-screen w-screen overflow-hidden"
+            className="relative h-screen w-full overflow-hidden"
           >
             <Image
               src={banner}
