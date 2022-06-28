@@ -64,14 +64,6 @@ export default function Contact() {
           >
             YouTube
           </a>
-          ,
-          <a
-            href="https://www.linkedin.com/in/fuad-elhasan-irfani/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            LinkedIn
-          </a>
         </div>
       </div>
     </div>
