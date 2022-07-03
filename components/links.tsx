@@ -1,6 +1,12 @@
-import { FaYoutube, FaShoppingCart, FaInfoCircle } from "react-icons/fa";
+import { FaYoutube, FaShoppingCart, FaInfoCircle, FaPalette } from "react-icons/fa";
 
 const list = [
+  {
+    title: "Art License",
+    subtitle: "Art Grab",
+    href: "https://artgrab.co/art/feilvan",
+    icon: <FaPalette size={28} />,
+  },
   {
     title: "Editing Process",
     subtitle: "YouTube",
