@@ -19,7 +19,7 @@
     "eslint-plugin-next": "^0.0.0",
     "framer-motion": "^6.3.11",
     "gray-matter": "^4.0.3",
-    "next": "latest",
+    "next": "^12.1.6",
     "parallax-controller": "^1.5.0",
     "postcss": "^8.4.14",
     "postcss-flexbugs-fixes": "^5.0.2",
@@ -44,7 +44,7 @@
     "@types/node": "^17.0.42",
     "@types/react": "^17.0.45",
     "eslint": "8.12.0",
-    "eslint-config-next": "12.1.4",
+    "eslint-config-next": "12.3.4",
     "typescript": "^4.7.3"
   }
 }
