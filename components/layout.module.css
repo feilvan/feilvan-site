@@ -1,0 +1,26 @@
+.icon {
+  @apply
+  h-6
+  text-neutral-600
+  hover:text-black
+  transition-all
+}
+
+.header {
+  @apply
+  flex
+  z-10
+  w-fit
+  justify-center
+  space-x-6
+  py-4
+  px-6
+  rounded-full
+  mx-auto
+  text-sm
+  sticky
+  top-4
+  backdrop-blur-sm
+  border
+  bg-white/80
+}

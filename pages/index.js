@@ -14,8 +14,8 @@ export default function Home() {
 function Introduction() {
   return (
     <>
-      <div id="introduction" className=" my-8 px-4">
-        <Image src={icon} className=" w-8 mb-4" />
+      <div id="introduction" className=" py-8 px-4 border-b">
+        <Image src={icon} className=" w-8 mb-4" alt="FEILVAN icon" />
         <div className=" text-neutral-600">Hello! 👋</div>
         <div className=" text-neutral-600">
           {" "}

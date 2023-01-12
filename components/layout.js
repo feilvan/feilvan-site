@@ -1,3 +1,4 @@
+import style from "./layout.module.css";
 import Head from "next/head";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -18,25 +19,20 @@ export default function Layout({ children }) {
         <title>{siteTitle}</title>
         <link rel="icon" href="/icon.svg" />
       </Head>
+      <Header />
       {children}
-      <Footer />
     </>
   );
 }
 
 function Icon({ icon }) {
-  return (
-    <FontAwesomeIcon
-      icon={icon}
-      className=" h-6 text-neutral-400 hover:text-black transition-all"
-    />
-  );
+  return <FontAwesomeIcon icon={icon} className={style.icon} />;
 }
 
-function Footer() {
+function Header() {
   return (
     <>
-      <div className=" flex justify-center space-x-4 border-t py-4 text-sm sticky bottom-0 backdrop-blur-sm bg-white/80">
+      <div className={style.header}>
         <Link href="mailto:hello@feilvan.art">
           <Icon icon={faEnvelope} />
         </Link>

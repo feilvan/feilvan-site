@@ -1,0 +1,28 @@
+.tab {
+  @apply
+  flex
+  justify-center
+  sticky
+  bottom-4
+  my-4
+  z-10
+  mx-auto
+  w-fit
+  p-1
+  space-x-1
+  rounded-full
+  backdrop-blur-sm
+  bg-white/80
+  border
+  drop-shadow-lg
+}
+
+.item {
+  @apply
+  flex
+  p-4
+  hover:bg-neutral-400/20
+  hover:text-neutral-600
+  rounded-full
+  transition-all
+}
