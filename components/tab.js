@@ -3,6 +3,9 @@ import React from "react";
 import { withRouter } from "next/router";
 import DigitalImaging from "./digitalImaging";
 import UiDesign from "./uiDesign";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPalette } from "@fortawesome/free-solid-svg-icons";
+import { faCompassDrafting } from "@fortawesome/free-solid-svg-icons";
 
 export default withRouter(Tab);
 
@@ -16,12 +19,15 @@ function Tab({ router }) {
 
   return (
     <>
-      <div className=" flex">
+      <div
+        id="tab"
+        className=" flex sticky top-0 z-10 backdrop-blur-sm bg-white/80"
+      >
         <Item selected={isTabOne} href={{ pathname: "/", query: { tab: "1" } }}>
-          Digital Imaging
+          <FontAwesomeIcon icon={faPalette} className="h-4" />
         </Item>
         <Item selected={isTabTwo} href={{ pathname: "/", query: { tab: "2" } }}>
-          UI Design
+          <FontAwesomeIcon icon={faCompassDrafting} className="h-4" />
         </Item>
       </div>
       <div>
@@ -36,9 +42,9 @@ function Item({ children, href, selected }) {
   return (
     <Link
       href={href}
-      className=" flex flex-grow justify-center py-2 bg-transparent hover:bg-neutral-200 border-b transition-all"
+      className=" flex flex-grow justify-center uppercase text-xs tracking-widest py-4 bg-transparent hover:bg-neutral-200 border-b-2 transition-all"
       style={{
-        color: selected ? "#000" : "#999",
+        color: selected ? "#000" : "#a3a3a3",
         borderColor: selected ? "#000" : "transparent",
       }}
     >
