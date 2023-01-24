@@ -22,11 +22,11 @@ import aiart18 from "../public/images/aiart/18.jpg";
 export default function AiArt() {
   return (
     <>
+      <div className=" mx-4 my-2">
+        <div>WIP Textual Inversion</div>
+        <div>Trained on Stable Diffusion 1.5</div>
+      </div>
       <div className=" flex flex-row flex-wrap">
-        <div className=" ml-4 my-2">
-          <div>WIP Textual Inversion</div>
-          <div>Trained on Stable Diffusion 1.5</div>
-        </div>
         <Item image={aiart1} />
         <Item image={aiart2} />
         <Item image={aiart3} />
