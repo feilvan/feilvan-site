@@ -29,13 +29,22 @@ function Tab({ router }) {
         {isTabThree && <UiDesign />}
       </div>
       <div id="tab" className={style.tab}>
-        <Item selected={isTabOne} href={{ pathname: "/", query: { tab: "1" } }}>
+        <Item
+          title="Digital Imaging"
+          selected={isTabOne}
+          href={{ pathname: "/", query: { tab: "1" } }}
+        >
           <FontAwesomeIcon icon={faPalette} className="w-5" />
         </Item>
-        <Item selected={isTabTwo} href={{ pathname: "/", query: { tab: "2" } }}>
+        <Item
+          title="AI Art"
+          selected={isTabTwo}
+          href={{ pathname: "/", query: { tab: "2" } }}
+        >
           <FontAwesomeIcon icon={faRobot} className="w-5" />
         </Item>
         <Item
+          title="UI Design"
           selected={isTabThree}
           href={{ pathname: "/", query: { tab: "3" } }}
         >
@@ -46,17 +55,24 @@ function Tab({ router }) {
   );
 }
 
-function Item({ children, href, selected }) {
+function Item({ children, href, selected, title }) {
   return (
     <Link
       href={href}
       className={`${style.item} ${
         selected
           ? " bg-neutral-900 text-neutral-200 shadow-md"
-          : "bg-transparent text-neutral-600"
+          : "bg-transparent text-neutral-600 hover:bg-neutral-400/20 hover:text-neutral-600"
       }`}
     >
-      {children}
+      <span className=" my-auto">{children}</span>
+      <span
+        className={` my-auto text-xs tracking-widest uppercase ${
+          selected ? "block" : "hidden"
+        }`}
+      >
+        {title}
+      </span>
     </Link>
   );
 }

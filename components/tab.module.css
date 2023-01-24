@@ -21,8 +21,7 @@
   @apply
   flex
   p-4
-  hover:bg-neutral-400/20
-  hover:text-neutral-600
   rounded-full
   transition-all
+  space-x-3
 }
