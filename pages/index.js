@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Tab from "../components/tab";
 import icon from "../public/icon.svg";
+import style from "./index.module.css";
 
 export default function Home() {
   return (
@@ -14,18 +15,17 @@ export default function Home() {
 function Introduction() {
   return (
     <>
-      <div id="introduction" className=" py-8 px-4 border-b">
-        <Image src={icon} className=" w-8 mb-4" alt="FEILVAN icon" />
-        <div className=" text-neutral-600">Hello! 👋</div>
-        <div className=" text-neutral-600">
-          {" "}
-          I'm{" "}
-          <span className=" font-medium text-black">Fuad Elhasan Irfani</span>
+      <div
+        id="introduction"
+        className=" py-8 px-6 border-b flex flex-col sm:flex-row"
+      >
+        <div className=" flex-1 my-auto text-center sm:text-end italic uppercase text-2xl tracking-widest overflow-clip">
+          <div className={style.rtl}>Fuad Elhasan Irfani</div>
         </div>
-        <div className=" text-neutral-600">
-          I do <span className=" font-medium text-black">Digital Imaging</span>,{" "}
-          <span className=" font-medium text-black">UI Design</span>, and{" "}
-          <span className=" font-medium text-black">Frontend</span>
+        <Image src={icon} className={style.hueRotate} alt="FEILVAN icon" />
+        <div className=" flex-1 my-auto text-center sm:text-start italic uppercase tracking-widest overflow-clip">
+          <div className={style.ltr}>Digital Imaging Artist</div>
+          <div className={style.ltr}>Front-End Developer</div>
         </div>
       </div>
     </>

@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 body {
-  @apply mx-auto max-w-screen-md;
+  @apply mx-auto max-w-screen-xl;
 }
