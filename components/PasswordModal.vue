@@ -24,7 +24,7 @@
       <div class="flex">
         <UButton :label="state.unlock ? 'Lock' : 'Unlock'" @click="state.unlock = !state.unlock" />
         <div v-if="state.unlock">This is the content.</div>
-        <UButton label="Try Unseal" @click="tryUnseal" />
+        <!-- <UButton label="Try Unseal" @click="tryUnseal" /> -->
       </div>
     </UModal>
   </div>
@@ -64,17 +64,17 @@ async function onSubmit(event: FormSubmitEvent<any>) {
     .finally(() => state.loading = false)
 }
 
-async function tryUnseal() {
-  await fetch('/api/try3/auth', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-  })
-    .then(res => res.json())
-    .then(data => console.log(data))
-    .catch(err => console.log(err))
-}
+// async function tryUnseal() {
+//   await fetch('/api/try3/auth', {
+//     method: 'POST',
+//     headers: {
+//       'Content-Type': 'application/json'
+//     },
+//   })
+//     .then(res => res.json())
+//     .then(data => console.log(data))
+//     .catch(err => console.log(err))
+// }
 
 </script>
 
