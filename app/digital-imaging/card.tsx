@@ -36,7 +36,7 @@ export default function Card({
               </Dialog.Close>
             </div>
             <div className="overflow-hidden rounded-xl">
-              <Image src={image} alt={date} />
+              <Image placeholder="blur" src={image} alt={date} />
             </div>
           </Dialog.Content>
         </Dialog.Overlay>
