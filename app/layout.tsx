@@ -50,7 +50,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} relative flex min-h-svh flex-col items-center bg-white font-mono text-neutral-900 antialiased dark:bg-neutral-950 dark:text-neutral-200`}
+        className={`${geistSans.variable} ${geistMono.variable} relative flex min-h-svh flex-col items-center antialiased`}
         suppressHydrationWarning
       >
         <LoaderWrapper>
