@@ -1,0 +1,68 @@
+@layer demo {
+  @property --head {
+    initial-value: 1.05;
+    inherits: true;
+    syntax: "<number>";
+  }
+
+  @property --tail {
+    initial-value: 0;
+    inherits: true;
+    syntax: "<number>";
+  }
+  body > svg {
+    width: max(44px, 10vmin);
+    overflow: visible !important;
+  }
+
+  svg g circle {
+    stroke-dasharray: var(--head);
+    stroke-dashoffset: var(--tail);
+  }
+
+  svg > g {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: spin 3.5s infinite linear reverse;
+  }
+
+  svg > circle {
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+
+  [data-animate="false"] svg > circle {
+    opacity: 1;
+  }
+
+  [data-glow="true"] svg > g {
+    filter: url("#light");
+  }
+
+  [data-animate="true"] svg g circle {
+    animation: draw infinite 2s ease-in-out;
+    animation-direction: reverse;
+    stroke-dasharray: 1.05;
+  }
+
+  @keyframes spin {
+    to {
+      rotate: -360deg;
+    }
+  }
+
+  @keyframes draw {
+    0%,
+    5% {
+      stroke-dashoffset: 1.05;
+    }
+    45%,
+    55% {
+      stroke-dashoffset: 2.1;
+    }
+    95%,
+    100% {
+      stroke-dashoffset: 3.15;
+    }
+  }
+}
