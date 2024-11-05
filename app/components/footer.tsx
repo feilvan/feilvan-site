@@ -12,8 +12,7 @@ import {
   RiLinkedinFill,
   RiMailLine,
 } from "react-icons/ri";
-
-import ColorSchemeToggle from "./color-scheme-toggle";
+import ThemeToggle from "./theme-toggle";
 
 export default function Footer() {
   const tabs = useMemo(
@@ -123,7 +122,7 @@ export default function Footer() {
         </div>
         <div className="mx-1 flex items-center justify-between gap-x-2 border-t border-neutral-200 pl-2 text-xs text-neutral-500 dark:border-neutral-800 dark:text-neutral-400">
           <div>FEILVAN | Available for work</div>
-          <ColorSchemeToggle />
+          <ThemeToggle />
         </div>
       </div>
     </nav>

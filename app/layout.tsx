@@ -6,6 +6,7 @@ import localFont from "next/font/local";
 import Footer from "./components/footer";
 import LoaderWrapper from "./components/loader-wrapper";
 import PageWrapper from "./components/page-wrapper";
+import { ThemeProvider } from "./components/theme-provider";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -34,29 +35,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-            try {
-              let theme = localStorage.getItem('theme') || 'auto';
-              if (theme === 'auto') {
-                theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-              }
-              document.documentElement.classList.add(theme);
-            } catch (e) {}
-          `,
-          }}
-        />
-      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} relative flex min-h-svh flex-col items-center antialiased`}
-        suppressHydrationWarning
       >
-        <LoaderWrapper>
-          <PageWrapper>{children}</PageWrapper>
-          <Footer />
-        </LoaderWrapper>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <LoaderWrapper>
+            <PageWrapper>{children}</PageWrapper>
+            <Footer />
+          </LoaderWrapper>
+        </ThemeProvider>
       </body>
     </html>
   );
