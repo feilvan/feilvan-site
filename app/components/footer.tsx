@@ -12,6 +12,7 @@ import {
   RiLinkedinFill,
   RiMailLine,
 } from "react-icons/ri";
+
 import ThemeToggle from "./theme-toggle";
 
 export default function Footer() {

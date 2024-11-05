@@ -1,7 +1,7 @@
 "use client";
 
-import { WiDaySunny, WiMoonAltFirstQuarter, WiMoonFull } from "react-icons/wi";
 import { useTheme } from "next-themes";
+import { WiDaySunny, WiMoonAltFirstQuarter, WiMoonFull } from "react-icons/wi";
 
 export default function ThemeToggle() {
   const { theme, setTheme } = useTheme();
