@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react";
-import { WiMoonFull, WiMoonAltFirstQuarter, WiDaySunny } from "react-icons/wi";
+import { useEffect,useState } from "react";
+import { WiDaySunny,WiMoonAltFirstQuarter, WiMoonFull } from "react-icons/wi";
 
 const ColorSchemeToggle = () => {
   // Initialize state with null to prevent hydration mismatch

@@ -1,7 +1,8 @@
 "use client";
 
-import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
+import { useEffect,useState } from "react";
+
 import Loader from "./loader";
 
 export default function LoaderWrapper({

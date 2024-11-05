@@ -1,10 +1,10 @@
 "use client";
 
-import { motion, AnimatePresence } from "framer-motion";
+import * as Dialog from "@radix-ui/react-dialog";
 import { StaticImageData } from "next/image";
 import Image from "next/image";
-import * as Dialog from "@radix-ui/react-dialog";
 import { RiCloseLargeFill } from "react-icons/ri";
+
 import Link from "@/components/link";
 
 export default function Card({

@@ -11,14 +11,11 @@
   "dependencies": {
     "@radix-ui/react-dialog": "^1.1.2",
     "@radix-ui/react-popover": "^1.1.2",
-    "@react-three/fiber": "^8.17.10",
-    "@types/three": "^0.169.0",
     "framer-motion": "^11.11.11",
     "next": "^15.0.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-icons": "^5.3.0",
-    "three": "^0.169.0"
+    "react-icons": "^5.3.0"
   },
   "devDependencies": {
     "@types/node": "^20.17.6",
@@ -26,6 +23,7 @@
     "@types/react-dom": "^18.3.1",
     "eslint": "^8.57.1",
     "eslint-config-next": "14.2.14",
+    "eslint-plugin-simple-import-sort": "^12.1.1",
     "postcss": "^8.4.47",
     "prettier": "^3.3.3",
     "prettier-plugin-tailwindcss": "^0.6.8",

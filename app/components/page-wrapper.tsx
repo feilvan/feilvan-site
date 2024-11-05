@@ -1,7 +1,7 @@
 "use client";
 
-import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
+import { usePathname } from "next/navigation";
 
 export default function PageWrapper({
   children,

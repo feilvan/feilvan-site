@@ -1,24 +1,28 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import * as Popover from "@radix-ui/react-popover";
+import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import * as Popover from "@radix-ui/react-popover";
+import { useEffect, useMemo, useState } from "react";
 import {
   RiArrowUpSLine,
   RiGithubFill,
-  RiLinkedinFill,
   RiInstagramFill,
+  RiLinkedinFill,
   RiMailLine,
 } from "react-icons/ri";
+
 import ColorSchemeToggle from "./color-scheme-toggle";
 
 export default function Footer() {
-  const tabs = [
-    { name: "Front-End", link: "/" },
-    { name: "Digital Imaging", link: "/digital-imaging" },
-  ];
+  const tabs = useMemo(
+    () => [
+      { name: "Front-End", link: "/" },
+      { name: "Digital Imaging", link: "/digital-imaging" },
+    ],
+    [],
+  );
   const [selectedTab, setSelectedTab] = useState(-1);
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
@@ -28,7 +32,7 @@ export default function Footer() {
     if (currentTabIndex !== -1) {
       setSelectedTab(currentTabIndex);
     }
-  }, [pathname]);
+  }, [pathname, tabs]);
 
   return (
     <div className="sticky bottom-0">
