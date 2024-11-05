@@ -1,5 +1,5 @@
-import { useEffect,useState } from "react";
-import { WiDaySunny,WiMoonAltFirstQuarter, WiMoonFull } from "react-icons/wi";
+import { useEffect, useState } from "react";
+import { WiDaySunny, WiMoonAltFirstQuarter, WiMoonFull } from "react-icons/wi";
 
 const ColorSchemeToggle = () => {
   // Initialize state with null to prevent hydration mismatch
@@ -68,6 +68,7 @@ const ColorSchemeToggle = () => {
 
   return (
     <button
+      aria-label="Toggle color scheme"
       onClick={cycleTheme}
       className="mx-1 flex items-center rounded-lg px-1 py-1 text-xl transition-colors"
     >

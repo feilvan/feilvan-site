@@ -12,7 +12,8 @@ export default function PageWrapper({
 
   return (
     <AnimatePresence mode="wait">
-      <motion.div
+      <motion.main
+        role="main"
         key={pathname}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -20,7 +21,7 @@ export default function PageWrapper({
         className="flex-grow"
       >
         {children}
-      </motion.div>
+      </motion.main>
     </AnimatePresence>
   );
 }

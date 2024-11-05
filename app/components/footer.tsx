@@ -35,7 +35,7 @@ export default function Footer() {
   }, [pathname, tabs]);
 
   return (
-    <div className="sticky bottom-0">
+    <nav role="navigation" className="sticky bottom-0">
       <div className="my-4 overflow-hidden rounded-xl border border-neutral-200/20 bg-neutral-50/90 shadow-lg backdrop-blur dark:border-neutral-800/60 dark:bg-neutral-900/90">
         <div className="flex flex-col overflow-hidden">
           <Popover.Root open={open} onOpenChange={setOpen}>
@@ -60,7 +60,10 @@ export default function Footer() {
                   </Link>
                 ))}
               </div>
-              <Popover.Trigger className="group">
+              <Popover.Trigger
+                className="group"
+                aria-label="Popover Trigger Button"
+              >
                 <RiArrowUpSLine className="ml-2 mr-3 text-xl transition-transform group-data-[state=open]:-scale-y-100" />
               </Popover.Trigger>
               <Popover.Portal forceMount>
@@ -123,6 +126,6 @@ export default function Footer() {
           <ColorSchemeToggle />
         </div>
       </div>
-    </div>
+    </nav>
   );
 }
