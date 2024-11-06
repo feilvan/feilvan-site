@@ -1,7 +1,7 @@
 "use client";
 
 import { useTheme } from "next-themes";
-import { WiDaySunny, WiMoonAltFirstQuarter, WiMoonFull } from "react-icons/wi";
+import { LuMoon, LuSun, LuSunMoon } from "react-icons/lu";
 
 export default function ThemeToggle() {
   const { theme, setTheme } = useTheme();
@@ -17,14 +17,14 @@ export default function ThemeToggle() {
           setTheme("light");
         }
       }}
-      className="mx-1 p-1 text-xl transition-colors hover:text-neutral-800 dark:hover:text-neutral-200"
+      className="m-1 px-[5px] py-1 text-lg transition-colors hover:text-neutral-800 dark:hover:text-neutral-200"
     >
       {theme === "light" ? (
-        <WiDaySunny />
+        <LuSun />
       ) : theme === "dark" ? (
-        <WiMoonFull />
+        <LuMoon />
       ) : (
-        <WiMoonAltFirstQuarter />
+        <LuSunMoon />
       )}
     </button>
   );

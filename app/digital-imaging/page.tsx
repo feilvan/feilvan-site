@@ -1,6 +1,6 @@
 import Link from "@/components/link";
 
-import Card from "./card";
+import CardDialog from "./dialog";
 import posts from "./posts";
 
 export default function DigitalImaging() {
@@ -8,7 +8,7 @@ export default function DigitalImaging() {
     <>
       <div className="grid grid-cols-2 gap-1 p-1 sm:gap-2 sm:p-2">
         {posts.map((post) => (
-          <Card
+          <CardDialog
             key={post.date}
             date={post.date}
             link={post.link}
@@ -18,11 +18,7 @@ export default function DigitalImaging() {
       </div>
       <div className="my-4 text-center">
         More on{" "}
-        <Link
-          href="https://www.instagram.com/feilvan"
-          external
-          className="underline"
-        >
+        <Link href="https://www.instagram.com/feilvan" external>
           Instagram
         </Link>
       </div>

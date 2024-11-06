@@ -6,12 +6,12 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
 import {
-  RiArrowUpSLine,
-  RiGithubFill,
-  RiInstagramFill,
-  RiLinkedinFill,
-  RiMailLine,
-} from "react-icons/ri";
+  LuChevronUp,
+  LuGithub,
+  LuInstagram,
+  LuLinkedin,
+  LuMail,
+} from "react-icons/lu";
 
 import ThemeToggle from "./theme-toggle";
 
@@ -64,7 +64,7 @@ export default function Footer() {
                 className="group"
                 aria-label="Popover Trigger Button"
               >
-                <RiArrowUpSLine className="ml-2 mr-3 text-xl transition-transform group-data-[state=open]:-scale-y-100" />
+                <LuChevronUp className="ml-2 mr-3 text-xl transition-transform group-data-[state=open]:-scale-y-100" />
               </Popover.Trigger>
               <Popover.Portal forceMount>
                 <AnimatePresence>
@@ -88,7 +88,7 @@ export default function Footer() {
                                 rel="noopener noreferrer"
                                 className="flex items-center gap-2 rounded-lg p-2 transition-colors hover:bg-neutral-100"
                               >
-                                <RiGithubFill className="text-xl" />
+                                <LuGithub className="text-xl" />
                               </a>
                               <a
                                 href="https://www.linkedin.com/in/fuad-elhasan-irfani/"
@@ -96,7 +96,7 @@ export default function Footer() {
                                 rel="noopener noreferrer"
                                 className="flex items-center gap-2 rounded-lg p-2 transition-colors hover:bg-neutral-100"
                               >
-                                <RiLinkedinFill className="text-xl" />
+                                <LuLinkedin className="text-xl" />
                               </a>
                               <a
                                 href="https://www.instagram.com/feilvan"
@@ -104,11 +104,11 @@ export default function Footer() {
                                 rel="noopener noreferrer"
                                 className="flex items-center gap-2 rounded-lg p-2 transition-colors hover:bg-neutral-100"
                               >
-                                <RiInstagramFill className="text-xl" />
+                                <LuInstagram className="text-xl" />
                               </a>
                             </div>
                             <div className="mt-2 flex items-center p-2">
-                              <RiMailLine className="text-xl" />
+                              <LuMail className="text-xl" />
                               <span>hello@feilvan.art</span>
                             </div>
                           </div>

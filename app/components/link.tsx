@@ -1,5 +1,5 @@
 import { default as NextLink } from "next/link";
-import { RiArrowRightUpLine } from "react-icons/ri";
+import { LuArrowUpRight } from "react-icons/lu";
 
 interface LinkProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
   href: string;
@@ -13,9 +13,15 @@ export default function Link({
   ...props
 }: LinkProps) {
   return external ? (
-    <a href={href} target="_blank" rel="noopener noreferrer" {...props}>
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="underline"
+      {...props}
+    >
       {children}
-      <RiArrowRightUpLine className="ml-1 inline-block" />
+      <LuArrowUpRight className="ml-1 inline-block" />
     </a>
   ) : (
     <NextLink href={href} {...props}>
