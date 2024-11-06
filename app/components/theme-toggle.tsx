@@ -8,6 +8,7 @@ export default function ThemeToggle() {
 
   return (
     <button
+      aria-label="Toggle theme"
       onClick={() => {
         if (theme === "light") {
           setTheme("dark");

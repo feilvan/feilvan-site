@@ -29,7 +29,7 @@ export default function SubItem({
     >
       <div className="flex flex-grow items-center gap-x-2">
         <div
-          className={`flex aspect-square min-w-5 items-center justify-center rounded border text-white ${
+          className={`grid aspect-square min-w-5 place-items-center rounded border text-white ${
             status === "completed"
               ? "border-transparent bg-green-500"
               : "border-neutral-600"

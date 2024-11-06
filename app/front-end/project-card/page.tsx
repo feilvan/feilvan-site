@@ -1,6 +1,8 @@
 import { Metadata } from "next";
 import { RiCalendarScheduleLine } from "react-icons/ri";
 
+import Link from "@/components/link";
+
 import Wrapper from "../wrapper";
 import Item from "./item";
 import ProfilePicture from "./profile-picture";
@@ -18,18 +20,18 @@ export default function Page() {
       tags={["personal project", "mockup"]}
       description={
         <>
-          <a
+          <Link
+            external
             href="https://dribbble.com/shots/25062591-Dark-Mode-Project-Card"
             target="_blank"
             rel="noopener noreferrer"
-            className="underline"
           >
             Design by Monty Hayton
-          </a>
+          </Link>
         </>
       }
     >
-      <div className="flex h-full w-svw items-center justify-center text-sm">
+      <div className="grid h-full w-svw place-items-center text-sm">
         <div className="relative m-2 flex w-full max-w-xl flex-col gap-y-6 rounded-3xl border border-neutral-100 p-4 sm:p-6 dark:border-neutral-900">
           <div id="header" className="flex justify-between">
             <div className="flex items-center gap-x-4">
@@ -61,7 +63,7 @@ export default function Page() {
               <ProfilePicture />
               <ProfilePicture />
               <ProfilePicture />
-              <div className="flex aspect-square w-8 items-center justify-center rounded-full border-2 border-white bg-neutral-100 text-xs dark:border-neutral-950 dark:bg-neutral-800">
+              <div className="grid aspect-square w-8 place-items-center rounded-full border-2 border-white bg-neutral-100 text-xs dark:border-neutral-950 dark:bg-neutral-800">
                 4
               </div>
             </div>

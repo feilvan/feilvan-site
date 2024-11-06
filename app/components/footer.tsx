@@ -54,6 +54,7 @@ export default function Footer() {
                       <motion.div
                         initial={{ opacity: 0, scale: 0.95 }}
                         animate={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 0.15 }}
                         className="absolute inset-0 z-0 h-full w-full rounded-lg border border-neutral-200 bg-white shadow-inner dark:border-neutral-700/40 dark:bg-neutral-800"
                       />
                     )}
@@ -76,7 +77,6 @@ export default function Footer() {
                         exit={{ opacity: 0, scale: 0.95, y: 8 }}
                         transition={{
                           duration: 0.15,
-                          ease: "easeOut",
                         }}
                       >
                         <div className="mb-2 flex w-80 flex-col gap-4 rounded-xl border border-neutral-200 bg-neutral-50/90 p-4 shadow-lg backdrop-blur transition dark:border-neutral-800 dark:bg-neutral-900/90">

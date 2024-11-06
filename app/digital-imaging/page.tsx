@@ -6,7 +6,7 @@ import posts from "./posts";
 export default function DigitalImaging() {
   return (
     <>
-      <div className="grid grid-cols-2 gap-1 p-1 sm:gap-2 sm:p-2">
+      <div className="grid grid-cols-2 gap-1 sm:gap-2">
         {posts.map((post) => (
           <CardDialog
             key={post.date}

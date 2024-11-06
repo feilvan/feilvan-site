@@ -1,7 +1,7 @@
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
-import { Children,useState } from "react";
+import { Children, useState } from "react";
 import { RiArrowDownSLine } from "react-icons/ri";
 
 export default function Item({
@@ -17,7 +17,7 @@ export default function Item({
   return (
     <div
       className={`rounded-xl border border-neutral-100 transition dark:border-neutral-900 ${
-        expanded ? "shadow-xl shadow-black/5 dark:shadow-black" : ""
+        expanded ? "shadow-xl shadow-black/5" : ""
       }`}
     >
       <button

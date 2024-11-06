@@ -18,7 +18,7 @@ export default function PageWrapper({
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.3, ease: "easeOut" }}
-        className="w-full max-w-screen-lg flex-grow"
+        className="flex w-full max-w-screen-lg flex-grow flex-col p-2 sm:p-2"
       >
         {children}
       </motion.main>
