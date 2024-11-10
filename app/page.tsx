@@ -21,20 +21,12 @@ export default function Home() {
       <div className="columns-1 gap-1 sm:columns-2 sm:gap-2">
         <div className="relative break-inside-avoid overflow-hidden rounded-lg border border-neutral-200 transition-transform hover:scale-[.98] dark:border-neutral-800">
           <Link href="/front-end/project-card">
-            <Image
-              src={projectCard}
-              alt="Feilvan"
-              style={{ aspectRatio: projectCard.width / projectCard.height }}
-            />
+            <Image src={projectCard} alt="Feilvan" />
           </Link>
         </div>
         <div className="relative break-inside-avoid overflow-hidden rounded-lg border border-neutral-200 transition-transform hover:scale-[.98] dark:border-neutral-800">
           <Link href="/front-end/kanban-board">
-            <Image
-              src={kanbanBoard}
-              alt="Feilvan"
-              style={{ aspectRatio: kanbanBoard.width / kanbanBoard.height }}
-            />
+            <Image src={kanbanBoard} alt="Feilvan" />
           </Link>
         </div>
       </div>
