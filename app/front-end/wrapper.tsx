@@ -14,7 +14,7 @@ export default function Wrapper({
   return (
     <div className="flex flex-grow flex-col items-center font-sans">
       <div className="mb-8 mt-16 w-full px-4 font-mono">
-        <h1 className="text-2xl">{title}</h1>
+        <h1 className="text-2xl font-semibold tracking-tight">{title}</h1>
         {tags && (
           <div className="mt-2 flex flex-wrap gap-x-2">
             {tags.map((tag) => (

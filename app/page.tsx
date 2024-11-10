@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 
+import kanbanBoard from "@/images/front-end/kanban-board.png";
 import projectCard from "@/images/front-end/project-card.png";
 
 import Link from "./components/link";
@@ -14,9 +15,11 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <>
-      <div className="mx-2 mb-4 mt-8 text-lg">Projects</div>
-      <div className="grid grid-cols-1 gap-1 sm:grid-cols-2 sm:gap-2">
-        <div className="relative overflow-hidden rounded-lg border border-neutral-200 transition-transform hover:scale-[.98] dark:border-neutral-800">
+      <div className="mx-2 mb-4 mt-8 text-lg font-semibold tracking-tight">
+        Projects
+      </div>
+      <div className="columns-1 gap-1 sm:columns-2 sm:gap-2">
+        <div className="relative break-inside-avoid overflow-hidden rounded-lg border border-neutral-200 transition-transform hover:scale-[.98] dark:border-neutral-800">
           <Link href="/front-end/project-card">
             <Image
               src={projectCard}
@@ -25,9 +28,20 @@ export default function Home() {
             />
           </Link>
         </div>
+        <div className="relative break-inside-avoid overflow-hidden rounded-lg border border-neutral-200 transition-transform hover:scale-[.98] dark:border-neutral-800">
+          <Link href="/front-end/kanban-board">
+            <Image
+              src={kanbanBoard}
+              alt="Feilvan"
+              style={{ aspectRatio: kanbanBoard.width / kanbanBoard.height }}
+            />
+          </Link>
+        </div>
       </div>
       <div className="mx-2">
-        <div className="mb-4 mt-8 text-lg">Experience</div>
+        <div className="mb-4 mt-8 text-lg font-semibold tracking-tight">
+          Experience
+        </div>
         <div className="text-sm">
           <div>Front-End Developer Intern</div>
           <div>
