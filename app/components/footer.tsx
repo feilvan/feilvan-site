@@ -7,6 +7,8 @@ import { usePathname } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
 import {
   LuChevronUp,
+  LuClipboard,
+  LuClipboardCheck,
   LuGithub,
   LuInstagram,
   LuLinkedin,
@@ -25,6 +27,7 @@ export default function Footer() {
   );
   const [selectedTab, setSelectedTab] = useState(-1);
   const [open, setOpen] = useState(false);
+  const [isCopied, setIsCopied] = useState(false);
   const pathname = usePathname();
 
   useEffect(() => {
@@ -84,12 +87,12 @@ export default function Footer() {
                             <span className="text-sm font-semibold tracking-tight">
                               Socials
                             </span>
-                            <div className="mt-2 flex gap-2">
+                            <div className="mt-2 flex gap-1">
                               <a
                                 href="https://github.com/feilvan"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="flex items-center gap-2 rounded-lg p-2 transition-colors hover:bg-neutral-500/10"
+                                className="flex items-center gap-2 rounded-md p-2 transition-colors hover:bg-neutral-500/10"
                               >
                                 <LuGithub className="text-xl" />
                               </a>
@@ -97,7 +100,7 @@ export default function Footer() {
                                 href="https://www.linkedin.com/in/fuad-elhasan-irfani/"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="flex items-center gap-2 rounded-lg p-2 transition-colors hover:bg-neutral-500/10"
+                                className="flex items-center gap-2 rounded-md p-2 transition-colors hover:bg-neutral-500/10"
                               >
                                 <LuLinkedin className="text-xl" />
                               </a>
@@ -105,17 +108,40 @@ export default function Footer() {
                                 href="https://www.instagram.com/feilvan"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="flex items-center gap-2 rounded-lg p-2 transition-colors hover:bg-neutral-500/10"
+                                className="flex items-center gap-2 rounded-md p-2 transition-colors hover:bg-neutral-500/10"
                               >
                                 <LuInstagram className="text-xl" />
                               </a>
                             </div>
-                            <span className="mt-2 text-sm font-semibold tracking-tight">
+                            <span className="mt-4 text-sm font-semibold tracking-tight">
                               Mail
                             </span>
-                            <div className="mt-2 flex items-center gap-x-2 p-2">
-                              <LuMail className="text-xl" />
-                              <span>hello@feilvan.art</span>
+                            <div className="mt-2 flex items-center gap-1">
+                              <a
+                                href="mailto:hello@feilvan.art"
+                                className="flex flex-grow items-center gap-x-2 rounded-md p-2 transition-colors hover:bg-neutral-500/10"
+                              >
+                                <LuMail className="text-xl" />
+                                <span className="font-semibold tracking-tight">
+                                  hello@feilvan.art
+                                </span>
+                              </a>
+                              <button
+                                className="rounded-md p-2 transition-colors hover:bg-neutral-500/10"
+                                onClick={() => {
+                                  navigator.clipboard.writeText(
+                                    "hello@feilvan.art",
+                                  );
+                                  setIsCopied(true);
+                                  setTimeout(() => setIsCopied(false), 1500);
+                                }}
+                              >
+                                {isCopied ? (
+                                  <LuClipboardCheck className="text-xl" />
+                                ) : (
+                                  <LuClipboard className="text-xl" />
+                                )}
+                              </button>
                             </div>
                           </div>
                         </div>
