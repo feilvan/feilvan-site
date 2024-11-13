@@ -81,12 +81,15 @@ export default function Footer() {
                       >
                         <div className="mb-2 flex w-80 flex-col gap-4 rounded-xl border border-neutral-200 bg-neutral-50/90 p-4 shadow-lg backdrop-blur transition dark:border-neutral-800 dark:bg-neutral-900/90">
                           <div className="flex flex-col">
-                            <div className="flex gap-2">
+                            <span className="text-sm font-semibold tracking-tight">
+                              Socials
+                            </span>
+                            <div className="mt-2 flex gap-2">
                               <a
                                 href="https://github.com/feilvan"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="flex items-center gap-2 rounded-lg p-2 transition-colors hover:bg-neutral-100"
+                                className="flex items-center gap-2 rounded-lg p-2 transition-colors hover:bg-neutral-500/10"
                               >
                                 <LuGithub className="text-xl" />
                               </a>
@@ -94,7 +97,7 @@ export default function Footer() {
                                 href="https://www.linkedin.com/in/fuad-elhasan-irfani/"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="flex items-center gap-2 rounded-lg p-2 transition-colors hover:bg-neutral-100"
+                                className="flex items-center gap-2 rounded-lg p-2 transition-colors hover:bg-neutral-500/10"
                               >
                                 <LuLinkedin className="text-xl" />
                               </a>
@@ -102,12 +105,15 @@ export default function Footer() {
                                 href="https://www.instagram.com/feilvan"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="flex items-center gap-2 rounded-lg p-2 transition-colors hover:bg-neutral-100"
+                                className="flex items-center gap-2 rounded-lg p-2 transition-colors hover:bg-neutral-500/10"
                               >
                                 <LuInstagram className="text-xl" />
                               </a>
                             </div>
-                            <div className="mt-2 flex items-center p-2">
+                            <span className="mt-2 text-sm font-semibold tracking-tight">
+                              Mail
+                            </span>
+                            <div className="mt-2 flex items-center gap-x-2 p-2">
                               <LuMail className="text-xl" />
                               <span>hello@feilvan.art</span>
                             </div>
