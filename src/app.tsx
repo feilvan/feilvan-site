@@ -15,13 +15,24 @@ import About from "./components/nodes/about";
 import Experience from "./components/nodes/experience";
 import DigitalImaging from "./components/nodes/digital-imaging";
 import OldTVEffect from "./components/tv-effect";
-import Bar from "./components/bar";
+import AboutSite from "./components/nodes/about-site";
+import Clock from "./components/nodes/clock";
 
 const nodes: TemplateNode[] = [
   {
     position: { x: 0, y: 0 },
     title: "About",
     children: <About />,
+  },
+  {
+    position: { x: 552, y: -304 },
+    title: "",
+    children: <Clock />,
+  },
+  {
+    position: { x: -306, y: 164 },
+    title: "",
+    children: <AboutSite />,
   },
   {
     position: { x: -474, y: -154 },
@@ -35,10 +46,11 @@ const nodes: TemplateNode[] = [
   },
 ];
 
-const initialNodes: Node[] = nodes.map((node) => ({
+const initialNodes: Node[] = nodes.map((node, i) => ({
   ...node,
-  id: node.title,
+  id: i.toString(),
   dragHandle: ".drag-handle",
+  selectable: false,
   data: {
     title: node.title,
     children: node.children,
@@ -73,15 +85,13 @@ export function Flow() {
 
   return (
     <div class="h-svh w-screen relative">
-      <Bar />
       <ReactFlow
         nodes={nodes}
         onNodesChange={onNodesChange}
         nodeTypes={nodeTypes}
         fitView
         fitViewOptions={{
-          duration: 1000,
-          nodes: [{ id: "About" }],
+          nodes: [{ id: "0" }],
         }}
         maxZoom={1}
         proOptions={{ hideAttribution: true }}

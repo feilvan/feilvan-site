@@ -4,7 +4,7 @@ import type { Node } from "../types";
 export default function NodeComponent(props: NodeProps<Node>) {
   return (
     <>
-      <div class="bg-gray-900 border border-gray-600 rounded-lg overflow-hidden hover:border-blue shadow shadow-black transition">
+      <div class="bg-gray-900 border border-gray-600 rounded-lg hover:border-blue shadow shadow-black transition">
         <div class="drag-handle cursor-grab relative border-gray-600 flex justify-between gap-2 px-3 py-1">
           <div class="flex gap-2">
             <span>{props.data.title}</span>
@@ -17,10 +17,10 @@ export default function NodeComponent(props: NodeProps<Node>) {
         </div>
         <div class="relative rounded-lg overflow-hidden border-t border-gray-600">
           {props.data.children}
-          <div class="absolute bottom-0 right-0 p-1 space-x-2 font-mono text-xs text-gray-600">
-            <span>{props.positionAbsoluteX.toFixed(2)}</span>
-            <span>{props.positionAbsoluteY.toFixed(2)}</span>
-          </div>
+        </div>
+        <div class="absolute -bottom-6 right-0 space-x-2 font-mono text-xs text-gray-600">
+          <span>{props.positionAbsoluteX.toFixed(2)}</span>
+          <span>{props.positionAbsoluteY.toFixed(2)}</span>
         </div>
       </div>
     </>

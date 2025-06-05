@@ -1,0 +1,59 @@
+:root {
+  --main-bg-color: oklch(44.6% 0.03 256.802);
+  --main-text-color: oklch(70.7% 0.022 261.325);
+}
+
+#clock:before {
+  content: "";
+  height: 4px;
+  width: 4px;
+  background-color: var(--main-text-color);
+  position: absolute;
+  border-radius: 50%;
+  z-index: 10;
+}
+#hour,
+#min,
+#sec {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  border-radius: 50%;
+}
+#hour {
+  height: 4em;
+  width: 4em;
+  transform: rotateZ(var(--hour-rotation));
+}
+#hour:before {
+  content: "";
+  position: absolute;
+  height: 50%;
+  width: 2px;
+  background-color: var(--main-text-color);
+  border-radius: 2px;
+}
+#min {
+  height: 6em;
+  width: 6em;
+  transform: rotateZ(var(--min-rotation));
+}
+#min:before {
+  content: "";
+  height: 50%;
+  width: 2px;
+  background-color: var(--main-text-color);
+  border-radius: 2px;
+}
+#sec {
+  height: 7em;
+  width: 7em;
+  transform: rotateZ(var(--sec-rotation));
+}
+#sec:before {
+  content: "";
+  height: 50%;
+  width: 2px;
+  background-color: oklch(70.4% 0.191 22.216);
+  border-radius: 2px;
+}

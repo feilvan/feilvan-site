@@ -1,7 +1,7 @@
 {
-  "name": "feilvan-202505",
+  "name": "feilvan-site",
   "private": true,
-  "version": "0.0.0",
+  "version": "202506",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -14,8 +14,7 @@
     "embla-carousel-class-names": "^8.6.0",
     "embla-carousel-react": "^8.6.0",
     "lucide-preact": "^0.511.0",
-    "preact": "^10.26.5",
-    "preact-reconciler": "^0.2.3"
+    "preact": "^10.26.5"
   },
   "devDependencies": {
     "@preact/preset-vite": "^2.10.1",
