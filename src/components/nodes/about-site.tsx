@@ -6,7 +6,7 @@ export default function AboutSite() {
     "unocss",
     "react-flow",
     "lucide",
-    "embla-carousel",
+    "radix-ui",
   ];
 
   return (

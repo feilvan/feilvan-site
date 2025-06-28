@@ -49,6 +49,14 @@
   border: 0;
 }
 
+.react-flow__panel {
+  position: static;
+  margin: 0;
+}
+
+.react-flow.light {
+  --xy-background-color-default: transparent;
+}
 .react-flow.dark {
   --xy-background-color-default: transparent;
 }
@@ -59,7 +67,15 @@
   --at-apply: "rounded-full border hover:border-gray-400 border-gray-600 text-gray-400 text-xs px-4 py-1 transition";
 }
 
+.control-button {
+  --at-apply: "p-1 ml-0.5 text-sm border border-transparent hover:border-gray-600 color-gray-400 rounded";
+}
+
 .gradient-fade {
   mask: linear-gradient(to bottom, black 50%, transparent 100%);
   -webkit-mask: linear-gradient(to bottom, black 50%, transparent 100%);
+}
+
+body {
+  --at-apply: "text-white bg-gray-900";
 }

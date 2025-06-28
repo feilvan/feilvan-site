@@ -10,7 +10,7 @@ export default function About() {
           class="gradient-fade w-[480px]"
         />
         <div class="flex gap-4 px-4 pb-4 -mt-12 z-1">
-          <div>
+          <div class="w-24">
             <img
               src="/images/profile.webp"
               alt="profile"

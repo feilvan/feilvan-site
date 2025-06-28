@@ -11,12 +11,16 @@ import {
 import NodeComponent from "./components/node";
 import { useState, useCallback } from "preact/hooks";
 import type { Node, TemplateNode } from "./types";
+import Bar from "./components/bar";
 import About from "./components/nodes/about";
 import Experience from "./components/nodes/experience";
 import DigitalImaging from "./components/nodes/digital-imaging";
 import OldTVEffect from "./components/tv-effect";
 import AboutSite from "./components/nodes/about-site";
 import Clock from "./components/nodes/clock";
+import Certifications from "./components/nodes/certifications";
+import FeProject from "./components/nodes/fe-project";
+import ThreeD from "./components/nodes/3d";
 
 const nodes: TemplateNode[] = [
   {
@@ -25,24 +29,39 @@ const nodes: TemplateNode[] = [
     children: <About />,
   },
   {
-    position: { x: 552, y: -304 },
-    title: "",
+    position: { x: 332, y: -467 },
+    title: "(～﹃～)~zZ",
     children: <Clock />,
   },
   {
-    position: { x: -306, y: 164 },
-    title: "",
+    position: { x: -397, y: -5 },
+    title: "package.json",
     children: <AboutSite />,
   },
   {
-    position: { x: -474, y: -154 },
+    position: { x: -373, y: 425 },
     title: "Experience",
     children: <Experience />,
   },
   {
-    position: { x: 584, y: 60 },
+    position: { x: -278, y: -470 },
+    title: "Certifications",
+    children: <Certifications />,
+  },
+  {
+    position: { x: 690, y: -272 },
     title: "Digital Imaging",
     children: <DigitalImaging />,
+  },
+  {
+    position: { x: 193, y: 424 },
+    title: "Front-End Projects",
+    children: <FeProject />,
+  },
+  {
+    position: { x: 738, y: 192 },
+    title: "Random 3D Works",
+    children: <ThreeD />,
   },
 ];
 
@@ -63,7 +82,7 @@ const nodeTypes: NodeTypes = {
 
 export function Flow() {
   const [nodes, setNodes] = useState<Node[]>(initialNodes);
-  const { setViewport, getViewport } = useReactFlow();
+  const { zoomIn, zoomOut } = useReactFlow();
 
   const onNodesChange = useCallback(
     (changes: NodeChange<Node>[]) => {
@@ -75,12 +94,13 @@ export function Flow() {
   const onPaneScroll = useCallback(
     (event: WheelEvent) => {
       event.preventDefault();
-      const { zoom, x, y } = getViewport();
-      const delta = event.deltaY < 0 ? 0.2 : -0.2;
-      const nextZoom = Math.max(0.2, Math.min(2, zoom + delta));
-      setViewport({ x, y, zoom: nextZoom }, { duration: 100 });
+      if (event.deltaY < 0) {
+        zoomIn({ duration: 100 });
+      } else {
+        zoomOut({ duration: 100 });
+      }
     },
-    [getViewport, setViewport]
+    [zoomIn, zoomOut]
   );
 
   return (
@@ -90,16 +110,13 @@ export function Flow() {
         onNodesChange={onNodesChange}
         nodeTypes={nodeTypes}
         fitView
-        fitViewOptions={{
-          nodes: [{ id: "0" }],
-        }}
-        maxZoom={1}
         proOptions={{ hideAttribution: true }}
         colorMode="system"
         className="transition-all"
         zoomOnScroll={false}
         onPaneScroll={onPaneScroll}
       />
+      <Bar />
     </div>
   );
 }
