@@ -11,6 +11,7 @@ import {
 import NodeComponent from "./components/node";
 import { useState, useCallback } from "preact/hooks";
 import type { Node, TemplateNode } from "./types";
+import Loading from "./components/loading";
 import Bar from "./components/bar";
 import About from "./components/nodes/about";
 import Experience from "./components/nodes/experience";
@@ -117,6 +118,7 @@ export function Flow() {
         onPaneScroll={onPaneScroll}
       />
       <Bar />
+      <Loading />
     </div>
   );
 }

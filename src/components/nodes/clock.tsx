@@ -6,22 +6,25 @@ export default function Clock() {
   const [time, setTime] = useState("");
   const [timeFormatted, setTimeFormatted] = useState("");
 
+  function refreshTime() {
+    const date = new Date();
+    setTime(date.toLocaleString("en-US", { timeZone: "Asia/Jakarta" }));
+    setTimeFormatted(
+      date.toLocaleTimeString("en-US", {
+        timeZone: "Asia/Jakarta",
+        weekday: "short",
+        month: "short",
+        day: "2-digit",
+        hour: "2-digit",
+        minute: "2-digit",
+        hour12: false,
+      })
+    );
+  }
+
   useEffect(() => {
-    const timer = setInterval(() => {
-      const date = new Date();
-      setTime(date.toLocaleString("en-US", { timeZone: "Asia/Jakarta" }));
-      setTimeFormatted(
-        date.toLocaleTimeString("en-US", {
-          timeZone: "Asia/Jakarta",
-          weekday: "short",
-          month: "short",
-          day: "2-digit",
-          hour: "2-digit",
-          minute: "2-digit",
-          hour12: false,
-        })
-      );
-    }, 1000);
+    refreshTime();
+    const timer = setInterval(refreshTime, 1000);
 
     return () => clearInterval(timer);
   }, []);
