@@ -111,6 +111,10 @@ export function Flow() {
         onNodesChange={onNodesChange}
         nodeTypes={nodeTypes}
         fitView
+        fitViewOptions={{
+          maxZoom: 1,
+          nodes: [{ id: "0" }],
+        }}
         proOptions={{ hideAttribution: true }}
         colorMode="system"
         className="transition-all"
