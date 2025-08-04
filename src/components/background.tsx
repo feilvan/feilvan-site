@@ -231,15 +231,25 @@ export default function Background() {
     canvas.style.width = "100%";
     canvas.style.height = "100%";
     canvas.style.zIndex = "-1";
-    canvas.width = container.offsetWidth;
-    canvas.height = container.offsetHeight;
+    canvas.style.opacity = "0.4";
 
-    let running = true;
+    function resizeCanvas() {
+      if (!canvas || !container) return;
+      const dpr = window.devicePixelRatio || 1;
+      const width = container.offsetWidth;
+      const height = container.offsetHeight;
+      canvas.width = width * dpr;
+      canvas.height = height * dpr;
+      canvas.style.width = width + "px";
+      canvas.style.height = height + "px";
+      const ctx = canvas.getContext("2d");
+      if (ctx) ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    }
+
+    resizeCanvas();
 
     function handleResize() {
-      if (!canvas || !container) return;
-      canvas.width = container.offsetWidth;
-      canvas.height = container.offsetHeight;
+      resizeCanvas();
     }
 
     window.addEventListener("resize", handleResize);
@@ -247,7 +257,6 @@ export default function Background() {
     runAnimation(canvas, container);
 
     return () => {
-      running = false;
       window.removeEventListener("resize", handleResize);
       if (canvas && canvas.parentNode === container) {
         container.removeChild(canvas);

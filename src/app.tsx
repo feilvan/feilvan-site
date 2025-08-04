@@ -123,6 +123,7 @@ export function Flow() {
       />
       <Bar />
       <Loading />
+      <Background />
     </div>
   );
 }
@@ -131,7 +132,6 @@ export function App() {
   return (
     <ReactFlowProvider>
       <Flow />
-      <Background />
     </ReactFlowProvider>
   );
 }
