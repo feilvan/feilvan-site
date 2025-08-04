@@ -75,12 +75,14 @@ export default function FeProject() {
                 <img
                   src={item.image}
                   alt={item.title}
-                  className="max-w-[60vw] max-h-[60vh] rounded"
+                  className="max-w-[90vw] sm:max-w-[36rem] max-h-[60vh] rounded"
                 />
                 <Dialog.Close className="absolute top-0 right-0 translate-x-1/2 -translate-y-1/2 p-2 bg-gray-800 rounded-full hover:bg-gray-600 border border-gray-600">
                   <X size={16} />
                 </Dialog.Close>
-                <div class="flex flex-col items-start p-4">{item.content}</div>
+                <div class="flex flex-col items-start p-4 text-xs sm:text-sm">
+                  {item.content}
+                </div>
               </div>
             </Dialog.Content>
           </Dialog.Portal>

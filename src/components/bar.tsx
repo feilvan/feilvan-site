@@ -26,8 +26,8 @@ export default function Bar() {
   }, []);
 
   return (
-    <div class="sticky bottom-0 flex justify-center pointer-events-none">
-      <div class="flex items-center w-fit bg-gray-800/80 backdrop-blur border border-b-0 border-gray-600 rounded-t-lg py-0.5 pointer-events-auto">
+    <div class="absolute w-full bottom-0 flex justify-center pointer-events-none">
+      <div class="flex items-center w-fit bg-gray-950/80 backdrop-blur border border-b-0 border-gray-600 rounded-t-lg py-0.5 pointer-events-auto">
         <Control />
         <span class="mx-2 font-mono text-xs text-gray-400">{time}</span>
       </div>

@@ -8,6 +8,7 @@ import {
   useReactFlow,
   ReactFlowProvider,
 } from "@xyflow/react";
+import update from "./components/background";
 import NodeComponent from "./components/node";
 import { useState, useCallback } from "preact/hooks";
 import type { Node, TemplateNode } from "./types";
@@ -16,7 +17,6 @@ import Bar from "./components/bar";
 import About from "./components/nodes/about";
 import Experience from "./components/nodes/experience";
 import DigitalImaging from "./components/nodes/digital-imaging";
-import OldTVEffect from "./components/tv-effect";
 import AboutSite from "./components/nodes/about-site";
 import Clock from "./components/nodes/clock";
 import Certifications from "./components/nodes/certifications";
@@ -130,9 +130,9 @@ export function Flow() {
 export function App() {
   return (
     <ReactFlowProvider>
-      <OldTVEffect>
-        <Flow />
-      </OldTVEffect>
+      <Flow />
     </ReactFlowProvider>
   );
 }
+
+update();

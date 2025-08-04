@@ -60,7 +60,7 @@ export default function Loading() {
                 left: `${col * 10}%`,
                 top: `${row * 10}%`,
               }}
-              className="absolute w-[10%] h-[10%] bg-gray-900 box-border"
+              className="absolute w-[10%] h-[10%] bg-gray-950 box-border"
             />
           ))
         )}

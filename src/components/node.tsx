@@ -4,7 +4,7 @@ import type { Node } from "../types";
 export default function NodeComponent(props: NodeProps<Node>) {
   return (
     <>
-      <div class="bg-gray-900 border border-gray-600 rounded-lg hover:border-blue shadow shadow-black transition">
+      <div class="bg-transparent backdrop-blur border border-gray-600 rounded-lg hover:border-blue shadow shadow-black transition">
         <div class="drag-handle cursor-grab relative border-gray-600 flex justify-between gap-2 px-3 py-1">
           <div class="flex gap-2">
             <span class="text-sm">{props.data.title}</span>
