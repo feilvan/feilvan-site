@@ -1,3 +1,5 @@
-# TODO
+![Website Screenshot](screenshot.webp)
 
-- animated bg + blur window
+<p style="text-align:center;">
+<span style="font-weight:bold">Fuad Elhasan Irfani</span> - Front-End Developer & Digital Artist
+</p>
