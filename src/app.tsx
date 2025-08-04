@@ -8,7 +8,7 @@ import {
   useReactFlow,
   ReactFlowProvider,
 } from "@xyflow/react";
-import update from "./components/background";
+import Background from "./components/background";
 import NodeComponent from "./components/node";
 import { useState, useCallback } from "preact/hooks";
 import type { Node, TemplateNode } from "./types";
@@ -131,8 +131,7 @@ export function App() {
   return (
     <ReactFlowProvider>
       <Flow />
+      <Background />
     </ReactFlowProvider>
   );
 }
-
-update();

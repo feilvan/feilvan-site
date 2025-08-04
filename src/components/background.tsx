@@ -1,3 +1,5 @@
+import { useEffect, useRef } from "react";
+
 // credit: https://codepen.io/nicoptere/pen/vXoxJz
 
 type PRNGType = {
@@ -74,71 +76,16 @@ function norm(t: number, a: number, b: number) {
   return (t - a) / (b - a);
 }
 
-//////////////////////////////////////////
+let vertices: number[][];
 
-var size = 1024;
-var canvas = document.createElement("canvas");
-canvas.style.position = "absolute";
-canvas.style.top = "0";
-canvas.style.left = "0";
-canvas.style.zIndex = "-1";
-canvas.width = canvas.height = size;
-var ctx = canvas.getContext("2d");
-document.body.appendChild(canvas);
-
-var vertices;
-function update() {
-  PRNG.setSeed(3);
-
-  var r, a, v, o;
-  var count = 20;
-  var spawn = 40;
-  var offset = 100;
-  vertices = [];
-  for (var i = 0; i < count; i++) {
-    r = ((PRNG.random() - 0.5) * window.innerWidth) / 2;
-    a =
-      (i % 2 == 0 ? 1 : -1) * Date.now() * 0.0001 + PRNG.random() * Math.PI * 2;
-    v = [Math.cos(a) * r, Math.sin(a) * r];
-    vertices.unshift(v);
-
-    for (var j = 0; j < spawn * (0.5 + PRNG.random()); j++) {
-      r = PRNG.random() * offset;
-      a =
-        (j % 2 == 0 ? 1 : -1) * Date.now() * 0.0002 +
-        PRNG.random() * Math.PI * 2;
-      o = vertices[0];
-      v = [o[0] + Math.cos(a % r) * r, o[1] + Math.sin((a % r) * 2) * r];
-      vertices.push(v);
-    }
-  }
-
-  if (!ctx) return;
-
-  ctx.restore();
-  ctx.save();
-
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
-
-  ctx.globalAlpha = 1;
-  ctx.fillStyle = "#000";
-  ctx.fillRect(0, 0, canvas.width, canvas.height);
-  ctx.translate(canvas.width / 2, canvas.height / 2);
-
-  ctx.strokeStyle = "#FFF";
-  var m = size / 8;
-  for (i = 8; i <= m; i *= 2) {
-    ctx.globalAlpha = (1 - i / m) * 0.1;
-    yolo(vertices, i, size, size);
-  }
-  requestAnimationFrame(update);
-}
-
-function yolo(vertices: number[][], size: number, _w: number, _h: number) {
-  if (!ctx) return;
-
-  //measures of an equalateral triangle
+function yolo(
+  ctx: CanvasRenderingContext2D,
+  vertices: number[][],
+  size: number,
+  _w: number,
+  _h: number
+) {
+  //measures of an equilateral triangle
   var sides = 3;
   var l = 2 * Math.sin(Math.PI / sides); //side length
   var a = l / (2 * Math.tan(Math.PI / sides)); //apothem
@@ -183,7 +130,6 @@ function yolo(vertices: number[][], size: number, _w: number, _h: number) {
         }
       }
     }
-    if (!ctx) return;
     if (PRNG.random() > 0.5) {
       ctx.moveTo(v[0], v[1]);
       ctx.lineTo(ps[0], ps[1]);
@@ -200,7 +146,6 @@ function yolo(vertices: number[][], size: number, _w: number, _h: number) {
   ctx.beginPath();
   ctx.fillStyle = "#FFF";
   fills.forEach(function (ps) {
-    if (!ctx) return;
     ctx.moveTo(ps[0], ps[1]);
     ctx.lineTo(ps[2], ps[3]);
     ctx.lineTo(ps[4], ps[5]);
@@ -209,4 +154,112 @@ function yolo(vertices: number[][], size: number, _w: number, _h: number) {
   ctx.fill();
 }
 
-export default update;
+function runAnimation(canvas: HTMLCanvasElement, container: HTMLDivElement) {
+  const ctx = canvas.getContext("2d");
+  if (!ctx) return;
+
+  function update() {
+    PRNG.setSeed(3);
+
+    let r, a, v, o;
+    const count = 20;
+    const spawn = 40;
+    const offset = 100;
+    vertices = [];
+    for (let i = 0; i < count; i++) {
+      r = ((PRNG.random() - 0.5) * container.offsetWidth) / 2;
+      a =
+        (i % 2 == 0 ? 1 : -1) * Date.now() * 0.0001 +
+        PRNG.random() * Math.PI * 2;
+      v = [Math.cos(a) * r, Math.sin(a) * r];
+      vertices.unshift(v);
+
+      for (let j = 0; j < spawn * (0.5 + PRNG.random()); j++) {
+        r = PRNG.random() * offset;
+        a =
+          (j % 2 == 0 ? 1 : -1) * Date.now() * 0.0002 +
+          PRNG.random() * Math.PI * 2;
+        o = vertices[0];
+        v = [o[0] + Math.cos(a % r) * r, o[1] + Math.sin((a % r) * 2) * r];
+        vertices.push(v);
+      }
+    }
+    if (!ctx) return;
+    ctx.restore();
+    ctx.save();
+
+    canvas.width = container.offsetWidth;
+    canvas.height = container.offsetHeight;
+
+    ctx.globalAlpha = 1;
+    ctx.fillStyle = "#000";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    ctx.translate(canvas.width / 2, canvas.height / 2);
+
+    ctx.strokeStyle = "#FFF";
+    const m = 1024 / 8;
+    for (let i = 8; i <= m; i *= 2) {
+      ctx.globalAlpha = (1 - i / m) * 0.1;
+      yolo(ctx, vertices, i, canvas.width, canvas.height);
+    }
+    requestAnimationFrame(update);
+  }
+
+  update();
+}
+
+export default function Background() {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+
+  useEffect(() => {
+    const container = containerRef.current;
+    let canvas = canvasRef.current;
+
+    if (!container) return;
+
+    if (!canvas) {
+      canvas = document.createElement("canvas");
+      canvasRef.current = canvas;
+      container.appendChild(canvas);
+    }
+
+    // Set canvas style to fill the container
+    canvas.style.position = "absolute";
+    canvas.style.top = "0";
+    canvas.style.left = "0";
+    canvas.style.width = "100%";
+    canvas.style.height = "100%";
+    canvas.style.zIndex = "-1";
+    canvas.width = container.offsetWidth;
+    canvas.height = container.offsetHeight;
+
+    let running = true;
+
+    function handleResize() {
+      if (!canvas || !container) return;
+      canvas.width = container.offsetWidth;
+      canvas.height = container.offsetHeight;
+    }
+
+    window.addEventListener("resize", handleResize);
+
+    runAnimation(canvas, container);
+
+    return () => {
+      running = false;
+      window.removeEventListener("resize", handleResize);
+      if (canvas && canvas.parentNode === container) {
+        container.removeChild(canvas);
+      }
+    };
+  }, []);
+
+  return (
+    <div
+      ref={containerRef}
+      className="absolute inset-0 -z-1 w-full h-full"
+      style={{ position: "absolute", inset: 0, width: "100%", height: "100%" }}
+    ></div>
+  );
+}
