@@ -14,13 +14,13 @@ export default function Folder({ items }: { items: Item[] }) {
         <Dialog.Root key={i}>
           <Dialog.Trigger asChild>
             <button>
-              <div className="flex flex-col justify-center gap-1 w-24 h-24 rounded-md border border-transparent hover:border-gray-600 p-1 transition">
+              <div className="flex flex-col gap-1 w-24 h-36 rounded-md border border-transparent hover:border-gray-600 p-1 transition">
                 <img
                   src={item.image}
                   alt={item.title}
                   className="w-full h-full object-contain"
                 />
-                <span className="text-xs text-gray-400">{item.title}.jpg</span>
+                <div className="text-xs text-gray-400">{item.title}.jpg</div>
               </div>
             </button>
           </Dialog.Trigger>

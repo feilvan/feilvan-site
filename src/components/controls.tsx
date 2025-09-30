@@ -1,4 +1,4 @@
-import { Frame, Map, Minus, Plus } from "lucide-preact";
+import { Map, Minus, Plus, Fullscreen } from "lucide-preact";
 import { useState } from "preact/hooks";
 import * as Popover from "@radix-ui/react-popover";
 import { MiniMap } from "@xyflow/react";
@@ -39,8 +39,13 @@ export default function Control() {
       <button class="control-button" onClick={() => zoomOut({ duration: 100 })}>
         <Minus size={16} />
       </button>
-      <button class="control-button" onClick={() => fitView({ duration: 200 })}>
-        <Frame size={16} />
+      <button
+        class="control-button"
+        onClick={() =>
+          fitView({ duration: 200, maxZoom: 0.5, nodes: [{ id: "0" }] })
+        }
+      >
+        <Fullscreen size={16} />
       </button>
     </>
   );

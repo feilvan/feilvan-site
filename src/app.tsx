@@ -50,17 +50,17 @@ const nodes: TemplateNode[] = [
     children: <Certifications />,
   },
   {
-    position: { x: 690, y: -272 },
+    position: { x: 648, y: -377 },
     title: "Digital Imaging",
     children: <DigitalImaging />,
   },
   {
-    position: { x: 193, y: 424 },
+    position: { x: 117, y: 388 },
     title: "Front-End Projects",
     children: <FeProject />,
   },
   {
-    position: { x: 738, y: 192 },
+    position: { x: 560, y: 119 },
     title: "Random 3D Works",
     children: <ThreeD />,
   },
@@ -112,7 +112,7 @@ export function Flow() {
         nodeTypes={nodeTypes}
         fitView
         fitViewOptions={{
-          maxZoom: 1,
+          maxZoom: 0.5,
           nodes: [{ id: "0" }],
         }}
         proOptions={{ hideAttribution: true }}
