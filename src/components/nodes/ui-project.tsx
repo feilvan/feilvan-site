@@ -11,42 +11,23 @@ interface Item {
 
 const items: Item[] = [
   {
-    title: "Markdown Previewer",
-    image: "/images/front-end/md.webp",
+    title: "Sistem Informasi Akademik",
+    image: "images/ui/siakad/0-thumbnail.webp",
     content: (
-      <>
-        <p>Markdown Previewer Project for freeCodeCamp Certification</p>
-        <a
-          href="https://github.com/feilvan/fcc-markdown-previewer"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="underline"
-        >
-          Project repository
-        </a>
-      </>
-    ),
-  },
-  {
-    title: "Pomodoro",
-    image: "/images/front-end/pomodoro.webp",
-    content: (
-      <>
-        <p>25 + 5 clock (Pomodoro) Project for freeCodeCamp Certification</p>
-        <a
-          href="https://github.com/feilvan/fcc-25-5-clock"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="underline"
-        >
-          Project repository
-        </a>
-      </>
+      <div>
+        <h3>Sistem Informasi Akademik</h3>
+        <p>A final project for Human and Computer Interaction course</p>
+        <div class="space-y-sm">
+          <img src="images/ui/siakad/1-intro.webp" />
+          <img src="images/ui/siakad/2-rencana-studi.webp" />
+          <img src="images/ui/siakad/3-layanan-surat-mahasiswa.webp" />
+        </div>
+      </div>
     ),
   },
 ];
 
-export default function FeProject() {
+export default function UiProject() {
   return (
     <div class="grid grid-cols-3 items-start gap-1 p-4">
       {items.map((item, i) => (

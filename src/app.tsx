@@ -22,6 +22,7 @@ import Clock from "./components/nodes/clock";
 import Certifications from "./components/nodes/certifications";
 import FeProject from "./components/nodes/fe-project";
 import ThreeD from "./components/nodes/3d";
+import UiProject from "./components/nodes/ui-project";
 
 const nodes: TemplateNode[] = [
   {
@@ -30,22 +31,22 @@ const nodes: TemplateNode[] = [
     children: <About />,
   },
   {
-    position: { x: 332, y: -467 },
+    position: { x: 360, y: -411 },
     title: "(～﹃～)~zZ",
     children: <Clock />,
   },
   {
-    position: { x: -397, y: -5 },
+    position: { x: 79, y: -441 },
     title: "package.json",
     children: <AboutSite />,
   },
   {
-    position: { x: -373, y: 425 },
+    position: { x: 51, y: 381 },
     title: "Experience",
     children: <Experience />,
   },
   {
-    position: { x: -278, y: -470 },
+    position: { x: -402, y: -390 },
     title: "Certifications",
     children: <Certifications />,
   },
@@ -55,7 +56,7 @@ const nodes: TemplateNode[] = [
     children: <DigitalImaging />,
   },
   {
-    position: { x: 117, y: 388 },
+    position: { x: -479, y: 40 },
     title: "Front-End Projects",
     children: <FeProject />,
   },
@@ -63,6 +64,11 @@ const nodes: TemplateNode[] = [
     position: { x: 560, y: 119 },
     title: "Random 3D Works",
     children: <ThreeD />,
+  },
+  {
+    position: { x: -413, y: 269 },
+    title: "UI Design",
+    children: <UiProject />,
   },
 ];
 
@@ -89,7 +95,7 @@ export function Flow() {
     (changes: NodeChange<Node>[]) => {
       setNodes((nds) => applyNodeChanges(changes, nds));
     },
-    [setNodes]
+    [setNodes],
   );
 
   const onPaneScroll = useCallback(
@@ -101,7 +107,7 @@ export function Flow() {
         zoomOut({ duration: 100 });
       }
     },
-    [zoomIn, zoomOut]
+    [zoomIn, zoomOut],
   );
 
   return (

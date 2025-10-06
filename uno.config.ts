@@ -2,6 +2,7 @@ import {
   defineConfig,
   presetWind4,
   presetWebFonts,
+  presetTypography,
   transformerDirectives,
 } from "unocss";
 import { createLocalFontProcessor } from "@unocss/preset-web-fonts/local";
@@ -11,6 +12,7 @@ export default defineConfig({
     presetWind4({
       dark: "media",
     }),
+    presetTypography(),
     presetWebFonts({
       provider: "none",
       themeKey: "font",
