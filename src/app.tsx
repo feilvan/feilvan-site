@@ -52,7 +52,7 @@ const nodes: TemplateNode[] = [
   },
   {
     position: { x: 648, y: -377 },
-    title: "Digital Imaging",
+    title: "Digital Art",
     children: <DigitalImaging />,
   },
   {
@@ -95,7 +95,7 @@ export function Flow() {
     (changes: NodeChange<Node>[]) => {
       setNodes((nds) => applyNodeChanges(changes, nds));
     },
-    [setNodes],
+    [setNodes]
   );
 
   const onPaneScroll = useCallback(
@@ -107,7 +107,7 @@ export function Flow() {
         zoomOut({ duration: 100 });
       }
     },
-    [zoomIn, zoomOut],
+    [zoomIn, zoomOut]
   );
 
   return (
