@@ -25,6 +25,22 @@ const items: Item[] = [
       </div>
     ),
   },
+  {
+    title: "Access by KAI Redesign",
+    image: "images/ui/access-kai/0-thumbnail.webp",
+    content: (
+      <div>
+        <h3>Access by KAI Redesign</h3>
+        <p>
+          My personal redesign on Access by KAI app, an Indonesian train booking
+          app. This is personal work and not affiliated with PT. KAI.
+        </p>
+        <img src="images/ui/access-kai/1-light.webp" />
+        <img src="images/ui/access-kai/2-dark.webp" />
+        <img src="images/ui/access-kai/3-resource.webp" />
+      </div>
+    ),
+  },
 ];
 
 export default function UiProject() {
