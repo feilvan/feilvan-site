@@ -11,16 +11,17 @@ interface Item {
 
 const items: Item[] = [
   {
-    title: "Sistem Informasi Akademik",
-    image: "images/ui/siakad/0-thumbnail.webp",
+    title: "Mobile Banking App",
+    image: "images/ui/mobile-banking/Banner.webp",
     content: (
       <div>
-        <h3>Sistem Informasi Akademik</h3>
-        <p>A final project for Human and Computer Interaction course</p>
+        <h3>Mobile Banking App</h3>
+        <p>Generic mobile banking app UI design.</p>
         <div class="space-y-sm">
-          <img src="images/ui/siakad/1-intro.webp" />
-          <img src="images/ui/siakad/2-rencana-studi.webp" />
-          <img src="images/ui/siakad/3-layanan-surat-mahasiswa.webp" />
+          <img src="images/ui/mobile-banking/Instagram post - 1.webp" />
+          <img src="images/ui/mobile-banking/Instagram post - 2.webp" />
+          <img src="images/ui/mobile-banking/Instagram post - 3.webp" />
+          <img src="images/ui/mobile-banking/Instagram post - 4.webp" />
         </div>
       </div>
     ),
@@ -38,6 +39,21 @@ const items: Item[] = [
         <img src="images/ui/access-kai/1-light.webp" />
         <img src="images/ui/access-kai/2-dark.webp" />
         <img src="images/ui/access-kai/3-resource.webp" />
+      </div>
+    ),
+  },
+  {
+    title: "Sistem Informasi Akademik",
+    image: "images/ui/siakad/0-thumbnail.webp",
+    content: (
+      <div>
+        <h3>Sistem Informasi Akademik</h3>
+        <p>A final project for Human and Computer Interaction course</p>
+        <div class="space-y-sm">
+          <img src="images/ui/siakad/1-intro.webp" />
+          <img src="images/ui/siakad/2-rencana-studi.webp" />
+          <img src="images/ui/siakad/3-layanan-surat-mahasiswa.webp" />
+        </div>
       </div>
     ),
   },
