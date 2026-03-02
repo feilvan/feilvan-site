@@ -60,7 +60,7 @@ export default function About() {
               class="ui-button mt-1 flex gap-2 items-center"
             >
               <Mail size={12} />
-              fuad@feilvan.art
+              feilvan@feilvan.com
             </a>
           </div>
         </div>
