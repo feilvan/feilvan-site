@@ -56,7 +56,7 @@ export default function About() {
               </a>
             </div>
             <a
-              href="mailto:fuad@feilvan.art"
+              href="mailto:feilvan@feilvan.com"
               class="ui-button mt-1 flex gap-2 items-center"
             >
               <Mail size={12} />
