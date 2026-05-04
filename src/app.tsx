@@ -57,7 +57,7 @@ const nodes: TemplateNode[] = [
   },
   {
     position: { x: -479, y: 40 },
-    title: "Front-End Projects",
+    title: "Web Development Projects",
     children: <FeProject />,
   },
   {
@@ -95,7 +95,7 @@ export function Flow() {
     (changes: NodeChange<Node>[]) => {
       setNodes((nds) => applyNodeChanges(changes, nds));
     },
-    [setNodes]
+    [setNodes],
   );
 
   const onPaneScroll = useCallback(
@@ -107,7 +107,7 @@ export function Flow() {
         zoomOut({ duration: 100 });
       }
     },
-    [zoomIn, zoomOut]
+    [zoomIn, zoomOut],
   );
 
   return (

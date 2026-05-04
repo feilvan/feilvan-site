@@ -22,7 +22,7 @@ const certs: Certs[] = [
     title: "C1 TOEFL ITP",
     issuer: "ETS",
     issueDate: "May 2025",
-    link: "https://www.feilvan.com/misc/TOEFL%20ITP.pdf",
+    link: "/misc/TOEFL%20ITP.pdf",
   },
 ];
 

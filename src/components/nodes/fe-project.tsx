@@ -44,6 +44,40 @@ const items: Item[] = [
       </>
     ),
   },
+  {
+    title: "Website Pengumuman Kelulusan",
+    image: "/images/front-end/mulan3.webp",
+    content: (
+      <>
+        <h3>Pengumuman Kelulusan SMK Muhammadiyah 9 Gambiran</h3>
+        <p>
+          <a
+            href="https://github.com/feilvan/mulan-kelulusan-2026"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="underline"
+          >
+            Project repository
+          </a>
+        </p>
+        <p>
+          Tech stack:
+          <ul>
+            <li>Nuxt (vue framework)</li>
+            <li>UnoCSS (CSS engine)</li>
+            <li>@sidebase/nuxt-auth (auth)</li>
+            <li>Neon (serverless postgres database)</li>
+            <li>Vercel (deployment)</li>
+          </ul>
+        </p>
+        <div class="space-y-4">
+          <img src="/images/front-end/mulan1.webp" alt="Halaman Awal" />
+          <img src="/images/front-end/mulan2.webp" alt="Halaman Login" />
+          <img src="/images/front-end/mulan3.webp" alt="Halaman Dashboard" />
+        </div>
+      </>
+    ),
+  },
 ];
 
 export default function FeProject() {
