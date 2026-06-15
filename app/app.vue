@@ -1,19 +1,10 @@
-<script setup lang="ts">
-// useHead({
-//   script: [
-//     { src: "/scripts/three.core.min.js" },
-//     { src: "/scripts/glitchGL.min.js" }
-//   ]
-// })
-</script>
-
 <template>
   <div flex justify-center min-h-dvh bg="neutral-100 dark:neutral-900" text="neutral-600 dark:neutral-300">
-    <div w="full">
+    <div grow>
       <nav>
         <AppNavTheme />
       </nav>
-      <div prose="~ neutral dark:invert">
+      <div>
         <NuxtPage />
       </div>
     </div>
@@ -22,16 +13,16 @@
 
 <style>
 @font-face {
-  font-family: "InterX";
-  src: url("/fonts/InterVariable.woff2");
+  font-family: "Geist";
+  src: url("/fonts/Geist.woff2") format(woff2);
   font-weight: 100 900;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "SpaceMonoX";
-  src: url("/fonts/SpaceMono-Regular.ttf");
+  font-family: "Doto";
+  src: url("/fonts/Doto-VariableFont_ROND,wght.ttf");
   font-weight: 100 900;
   font-style: normal;
   font-display: swap;

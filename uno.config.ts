@@ -21,8 +21,8 @@ export default defineConfig({
       provider: "none",
       themeKey: "font",
       fonts: {
-        sans: "InterX",
-        mono: "SpaceMonoX",
+        sans: "Geist",
+        mono: "Doto",
       },
     }),
   ],
