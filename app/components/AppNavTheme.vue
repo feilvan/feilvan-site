@@ -16,7 +16,7 @@ function setLight() {
   themeValue.theme = "light";
 }
 
-if (import.meta.client) {
+onBeforeMount(() => {
   const body = document.body;
   const media = window.matchMedia("(prefers-color-scheme: dark)");
   const themeKey = "feilvan:theme";
@@ -25,7 +25,10 @@ if (import.meta.client) {
   if (saved === "auto") setAuto();
   else if (saved === "dark") setDark();
   else if (saved === "light") setLight();
-  else localStorage.setItem(themeKey, "auto");
+  else {
+    localStorage.setItem(themeKey, "auto")
+    setAuto()
+  };
 
   prefersDark.value = media.matches;
   body.classList.add("font-sans");
@@ -46,7 +49,7 @@ if (import.meta.client) {
     body.classList.toggle("auto", curr.isAuto);
     body.classList.toggle("dark", curr.theme === "dark");
   });
-}
+})
 
 const cycleTheme = () => {
   console.log(themeValue)

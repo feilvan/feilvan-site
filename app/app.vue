@@ -1,5 +1,13 @@
+<script setup lang="ts">
+const loading = ref(true)
+onMounted(() => loading.value = false)
+</script>
+
 <template>
   <div flex justify-center min-h-dvh bg="neutral-100 dark:neutral-900" text="neutral-600 dark:neutral-300">
+    <div v-if="loading" bg-neutral-900 text-neutral-300 fixed inset-0 content-center text-center>
+      <div>Loading...</div>
+    </div>
     <div grow>
       <nav>
         <AppNavTheme />

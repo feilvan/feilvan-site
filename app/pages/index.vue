@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import TestHook from '~/components/TestHook.vue';
-
 const { instance } = useGlitchGL('.glitchGL', {
   intensity: 1.0,
   effects: {
@@ -20,6 +18,5 @@ const { instance } = useGlitchGL('.glitchGL', {
     </div>
     <div font-mono font-900 text-2xl tracking-tighter>feilvan</div>
     <div>Frontend Developer & Digital Artist</div>
-    <!-- <TestHook /> -->
   </div>
 </template>
